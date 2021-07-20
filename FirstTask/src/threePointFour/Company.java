@@ -4,11 +4,11 @@ import java.util.List;
 
 public class Company {
 
-    List<Emplyee> Employees ;
+    List<Emplyee> employees;
 
-    public  Company(List<Emplyee> emp){
+    public  Company(List<Emplyee> employees){
 
-    Employees = emp;
+    this.employees = employees;
     }
 
 }

@@ -1,8 +1,8 @@
 package TaskThree;
 
-public class ClassB extends ClassA {
+public class Car extends Vehicle {
 
-    public void show(){
+    public void drift(){
         System.out.println("SHOW METHOD FROM CLASS B");
 
     }

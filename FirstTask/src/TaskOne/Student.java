@@ -2,19 +2,17 @@ package TaskOne;
 
 public class Student {
 
-    public String Name ;
-    public String fName ;
-    public String RollNo ;
+    private String Name ;
+    private String fatherName;
+    private String RollNo ;
+
+    public String getName() { return Name; }
+    public String getFatherName() { return fatherName; }
+    public String getRollNo() { return RollNo; }
 
 
-    public  Student(){};
-
-    public  Student(String name , String fname , String rollno){
-        Name = name;
-        fName = fname ;
-        RollNo = rollno;
-
-    }
-
+    public void setName(String name) { Name = name; }
+    public void setFatherName(String fatherName) { this.fatherName = fatherName; }
+    public void setRollNo(String rollNo) { RollNo = rollNo; }
 
 }

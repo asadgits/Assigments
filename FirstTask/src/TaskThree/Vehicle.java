@@ -1,8 +1,8 @@
 package TaskThree;
 
-public class ClassA  {
+public class Vehicle {
 
-    public void Hello(){
+    public void run(){
 
         System.out.println("HELLO METHOD FROM CLASS A");
     }
