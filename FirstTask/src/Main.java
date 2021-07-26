@@ -9,11 +9,14 @@ import threePointTwo.BigSchoolingSystem;
 
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.*;
 
 public class  Main{
 
-    public static void main(String abc[]){
+    public static void main(String abc[]) throws ExecutionException, InterruptedException {
 
 
 //        "1. - Using encapsulation write a program in java that encapsulates Student's information (name, roll no etc)
@@ -29,22 +32,89 @@ public class  Main{
 //           Also confirm this behaviour by prinitng the object.
 //           Another way to determine same object is the ""=="" operator, it should return `true` if you have same object in both references.
 
-        Thread threadOne = new Thread (new Runnable(){
-            public void run(){
-              SingleTon.getObject();
+//
+//        Map<Integer, SingleTon> singletonObjects = new HashMap<>();
+//            ExecutorService executor = Executors.newFixedThreadPool(7);
+//            for(int index = 0; index<20; index++) {
+//                Future<SingleTon> futureCall = executor.submit(new Callable<SingleTon>() {
+//                    @Override
+//                    public SingleTon call() throws Exception {
+//                        return SingleTon.getObject();
+//                    }
+//                });
+//                SingleTon result1 = futureCall.get(); // Here the thread will be blocked
+//                singletonObjects.put(index, result1);
+//            }
+//            singletonObjects.entrySet().stream().forEach(e-> System.out.println(e.getKey()+" -> "+e.getValue()));
+//            // until the result came back.
+
+        /*System.out.println("THIS IS HASHCODE OF : FIRST INSTANCE : "+result1.hashCode());
+        System.out.println("THIS IS REFERENCE OF : FIRST INSTANCE : "+result1.getClass());
+        System.out.println("THIS IS REFERENCE OF : FIRST INSTANCE : "+result1);
+
+        Future<SingleTon> futureCall1 = executor.submit(new Callable<SingleTon>() {
+            @Override
+            public SingleTon call() throws Exception {
+                return SingleTon.getObject();
             }
         });
 
-        Thread threadTwo = new Thread (new Runnable(){
-            public void run(){
-            SingleTon.getObject();
-            }
-        });
+        SingleTon result2 = futureCall.get();*/
+//
+//        ExecutorService executor1 = Executors.newFixedThreadPool(2);
+//        Future<SingleTon> futureCall1 = executor.submit(new Callable<SingleTon>() {
+//            @Override
+//            public SingleTon call() throws Exception {
+//                return SingleTon.getObject();
+//            }
+//        });
+//
+//        Future<SingleTon> futureCall1 = executor.submit(new Callable<SingleTon>() {
+//            @Override
+//            public SingleTon call() throws Exception {
+//                return SingleTon.getObject();
+//            }
+//        });
+//        SingleTon result2 = futureCall1.get(); // Here the thread will be blocked
+//        // until the result came back.
 
-        threadOne.start();
-      //  try{ Thread.sleep(10);}catch(Exception e){}
-        threadTwo.start();
+        //System.out.println("THIS IS HASHCODE OF : SECOND INSTANCE : " + result2.hashCode());
+        //System.out.println("THIS IS REFERENCE OF : SECOND INSTANCE : " + result2.getClass());
+        //System.out.println("THIS IS REFERENCE OF : SECOND INSTANCE : " + result2);
 
+
+
+
+
+
+
+
+//
+//
+//        SingleTon singleTon1;
+//
+////through lambda
+//        new Thread (() -> {
+//            SingleTon singleTon =  SingleTon.getObject();
+//        }).start();
+//
+////through normal approch
+//       Thread threadTwo = new Thread (new Runnable(){
+//            public void run(){
+//                SingleTon singleTon1 = SingleTon.getObject();
+//            }
+//        });
+//
+//
+//      //  try{ Thread.sleep(10);}catch(Exception e){}
+//        threadTwo.start();
+
+
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//        ExecutorService es = new Exe
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
@@ -157,5 +227,8 @@ public class  Main{
 
 
     }
+
+
+
 
 }

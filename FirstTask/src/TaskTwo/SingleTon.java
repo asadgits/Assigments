@@ -1,7 +1,7 @@
 package TaskTwo;
 
-public class SingleTon{
-
+public class SingleTon {
+    static int objectCount;
 //    this approach is costly and eager loading   So we are moving to lazay loading appproach
     /*
     private static SingleTon st = new SingleTon();
@@ -91,27 +91,42 @@ public class SingleTon{
 
 
 
-    private static SingleTon ston ;
-    private SingleTon(){
 
+
+
+
+    private static SingleTon ston ;
+
+    private SingleTon(){
+        objectCount++;
         System.out.println("SINGLETON CLASS");
 
     };
 
-
+    private static int count;
     public static  SingleTon getObject(){
 
-        if(ston == null){
+//        if(ston == null){
+//            if(count%2==0) {
+//                try {
+//                    Thread.sleep(4000);
+//                } catch (InterruptedException e) {
+//                 }
+//            }
+//            count++;
+
 
             synchronized (SingleTon.class){
 
                 if(ston == null)
                     ston= new SingleTon();
 
+
+
             }
 
+//            ston= new SingleTon();
 
-        }
         return ston;
 
     }
