@@ -7,6 +7,7 @@ import threePointFour.Company;
 import threePointFour.Emplyee;
 import threePointTwo.BigSchoolingSystem;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -136,7 +137,23 @@ public class  Main{
 //        The question is: Can a java class implement One interfaces and One Abstract Class
 //        with same methods having the same signature but different return types??
 
+        testInterfaceAndAbstractClass.Corolla corollaClass = new testInterfaceAndAbstractClass.Corolla();
+        corollaClass.work();
 
+        //So the conclusion is that if in both interface and Abstract has a method with same name so there are
+        // two possibilities , number one is that both has different return type So definatily i will show error
+        //of clash between them
+
+        //if both are retrun's void , in this situtation 2 possible outputs!!!
+        // 1) is that if we declared the body of the method in Abstract class and also in
+        // inherited class it will consider the implementation of abstract class method and ignores
+        // the implementation which is declared in inherited class
+
+        // 2) if we didn't declare the body of that method in abstract class instead we declare the body in
+        // inherited class So that implementation will considered for both interface and for abstract class
+
+        // if we didn't declare any implementation in any of them in inherited class or in absract class
+        //it will give error in abstract class for implement the method of interface 
 
 
     }
