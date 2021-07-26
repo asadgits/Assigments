@@ -153,7 +153,7 @@ public class  Main{
         // inherited class So that implementation will considered for both interface and for abstract class
 
         // if we didn't declare any implementation in any of them in inherited class or in absract class
-        //it will give error in abstract class for implement the method of interface 
+        //it will give error in abstract class for implement the method of interface
 
 
     }
