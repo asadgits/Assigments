@@ -1,3 +1,4 @@
+import fifth.Fifth;
 import first.First;
 import fourth.Fourth;
 import second.Second;
@@ -50,8 +51,9 @@ public class MainClass {
 //        5. Write a Java program to count the number of Prime Numbers less than a given positive number.
 //         Hint: To complete the above program, you can also start with a program to find if any given number is prime or not?"
 //
+        Fifth fifth = new Fifth();
 
-
+        System.out.println(fifth.isPrime(7));
 
 
 
