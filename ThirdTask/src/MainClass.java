@@ -53,7 +53,7 @@ public class MainClass {
 //
         Fifth fifth = new Fifth();
 
-        System.out.println(fifth.isPrime(7));
+        System.out.println(fifth.isPrime(37));
 
 
 
