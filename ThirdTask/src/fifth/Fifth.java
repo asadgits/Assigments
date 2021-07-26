@@ -2,43 +2,41 @@ package fifth;
 
 public class Fifth {
 
-    private final int startRange;
-    private final int EndRange;
+    private final int Range;
+
 
     public int count() {
-        return countPrimeNumbers(startRange , EndRange);
+        return countPrimeNumbers(Range);
     }
 
-    public Fifth(int startRange , int EndRange) {
-        this.startRange = startRange;
-        this.EndRange = EndRange;
+    public Fifth(int Range) {
+        this.Range = Range;
+
     }
 
-    private int countPrimeNumbers(int startRange , int EndRange){
+    private int countPrimeNumbers(int Range) {
+
+        int flag;
         int count = 0;
-        for (int i= startRange; i <= EndRange; i++){
-            if(isPrime(i)){
+        for (int i = 2; i < Range; i++) {
+            flag=1;
+            for (int j = 2; j < i; j++) {
+
+                if (i % j == 0) {
+                    flag = 0;
+                    break;
+                }
+                System.out.println(j);
+            }
+            if (flag == 1) {
                 count++;
             }
         }
-        return count;
+    return count;
     }
 
-
-
-    private boolean isPrime(int n) {
-        int count=0;
-        if (n <= 1) {
-            return false;
-        }
-        for (int i = 2; i < n/2; i++) {
-            if (n % i == 0) {
-                return false;
-            }
-        }// for loop
-
-        return true;
-    }
 
 
 }
+
+
