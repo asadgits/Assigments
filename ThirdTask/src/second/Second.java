@@ -2,7 +2,7 @@ package second;
 
 public class Second {
 
-    public void run(){
+    public static void CompareToMethod(){
 
         String firstVar = "aa";
         String secondVar = "aA";

@@ -1,18 +1,53 @@
 package fourth;
 
+import java.util.Arrays;
+
 public class Fourth {
-    public void run(){
-        StringBuffer str1 = new StringBuffer();
-        String abcd = "Java is an Object Oriented Language";
-        for (int a: abcd.toCharArray()) {
-            if(a>=97 && a<=122 ){
-                a-= 32;
-                str1.append((char)a);
+    public static StringBuilder capitalize(String textString){
+
+        StringBuilder StringVariable = new StringBuilder();
+        String SomeText = textString;
+
+        for (int checkAsci: SomeText.toCharArray()) {
+
+            if(checkAsci>=97 && checkAsci<=122 ){
+                checkAsci-= 32;
+                StringVariable.append((char)checkAsci);
             }
             else{
-                str1.append((char)a);
+                StringVariable.append((char)checkAsci);
             }
         }
-        System.out.println("\n\n\n"+str1.toString());
+
+        return StringVariable;
+
     }
+
+    public static StringBuilder firstLetterCapitialize(String textString){
+
+        StringBuilder tempString = new StringBuilder();
+        StringBuilder mainString = new StringBuilder();
+
+        String someText = textString;
+        String[] words = someText.split("\\s");
+
+
+        for (String tempStringLitral:words) {
+            int checkAsci =  tempStringLitral.charAt(0);
+
+            if(checkAsci>=97 && checkAsci<=122 ){
+                checkAsci-= 32;
+                tempString.append(tempStringLitral);
+                tempString.setCharAt(0 , (char)checkAsci);
+                mainString.append(tempString + " ");
+                tempString.setLength(0);
+            }
+            else{
+                mainString.append(tempStringLitral + " ");
+            }
+        }
+
+        return mainString;
+    }
+
 }

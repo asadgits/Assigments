@@ -2,7 +2,7 @@ package first;
 
 public class First {
 
-    public void run(){
+    public void showDifference(){
 
 
         String first = "Helloworld";

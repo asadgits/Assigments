@@ -1,20 +1,15 @@
 package fifth;
 
-public class Fifth {
+public final class FifthUtil {
 
-    private final int Range;
+    private FifthUtil(){};
 
-
-    public int count() {
-        return countPrimeNumbers(Range);
+    public static int count(int range) {
+        return countPrimeNumbers(range);
     }
 
-    public Fifth(int Range) {
-        this.Range = Range;
 
-    }
-
-    private int countPrimeNumbers(int Range) {
+    private static int countPrimeNumbers(int Range) {
 
         int flag;
         int count = 0;
@@ -26,7 +21,6 @@ public class Fifth {
                     flag = 0;
                     break;
                 }
-                System.out.println(j);
             }
             if (flag == 1) {
                 count++;
