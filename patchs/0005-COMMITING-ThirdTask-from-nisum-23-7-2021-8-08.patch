@@ -1,0 +1,263 @@
+From 1a663fc97c00a548a5780132fa2f40f8814443b7 Mon Sep 17 00:00:00 2001
+From: asadgits <iamasadiqbal@gmail.com>
+Date: Fri, 23 Jul 2021 20:08:47 +0500
+Subject: [PATCH 05/12] COMMITING ThirdTask/ from nisum 23/7/2021 8:08
+
+---
+ SecondTask/.idea/workspace.xml                |  57 ++++++++++
+ .../out/production/ThirdTask/MainClass.class  | Bin 1504 -> 3123 bytes
+ ThirdTask/src/MainClass.java                  |  98 ++++++++++++++++--
+ 3 files changed, 146 insertions(+), 9 deletions(-)
+ create mode 100644 SecondTask/.idea/workspace.xml
+
+diff --git a/SecondTask/.idea/workspace.xml b/SecondTask/.idea/workspace.xml
+new file mode 100644
+index 0000000..dabafb3
+--- /dev/null
++++ b/SecondTask/.idea/workspace.xml
+@@ -0,0 +1,57 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ChangeListManager">
++    <list default="true" id="9082f706-6c17-4ec1-8c58-cf9d5c64dbe3" name="Default Changelist" comment="" />
++    <option name="SHOW_DIALOG" value="false" />
++    <option name="HIGHLIGHT_CONFLICTS" value="true" />
++    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++    <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Interface" />
++        <option value="Class" />
++      </list>
++    </option>
++  </component>
++  <component name="ProjectId" id="1vWOy97XAEujxYpOAfxU2WtDTNY" />
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
++  </component>
++  <component name="PropertiesComponent">
++    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
++    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
++  </component>
++  <component name="RecentsManager">
++    <key name="CreateClassDialog.RecentsKey">
++      <recent name="three" />
++    </key>
++  </component>
++  <component name="RunManager">
++    <configuration name="MainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="MainClass" />
++      <module name="SecondTask" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <recent_temporary>
++      <list>
++        <item itemvalue="Application.MainClass" />
++      </list>
++    </recent_temporary>
++  </component>
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
++  <component name="TaskManager">
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="9082f706-6c17-4ec1-8c58-cf9d5c64dbe3" name="Default Changelist" comment="" />
++      <created>1626674636809</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1626674636809</updated>
++    </task>
++    <servers />
++  </component>
++</project>
+\ No newline at end of file
+diff --git a/ThirdTask/out/production/ThirdTask/MainClass.class b/ThirdTask/out/production/ThirdTask/MainClass.class
+index 50f3e3f4d41d5ecae714b8024ec99cdd220d8696..010b1d21e47c52f2babf5d1365f2c2c867c5e97a 100644
+GIT binary patch
+literal 3123
+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
+JOT3Bne*l83#-jiL
+
+delta 483
+zcmZWmyG{a85IvV=_ri*Z8hI3wSWtj(!582Y5mB+hSV7`KwlET6#LC9n!s>p86|pd}
+zu(C3KgkNC%0`cr(EHv4BX6DSCGn4E?^nJj5{d#%^kjG)yyc0tbDFJ`QI%^kNR;Qyr
+zHCxra)#1VFmDN12SQp1uqh(8^RY}hTH%x3|OJX~KaTL_8{vwL%$S98q1j_BUed(Im
+z9f>`Gg!<4U>P-(C68i#ix6I4YS`r>!0HS~ngE+}*mQgV3sYi&e+nypiZSYMK1N{Na
+za2W7o4)bIv7CC6N0-EYxHf|iX21lKONi<kVq7Nae5*VQ}j4UE3B8n5l&>-V%$n;&X
+zfVAszN@kHe4Aim2%tKWY%gi)t<5*$l#VTiO@b)kPO(J_O5#k3S5$-uQ<bEg*DbeHk
+k`Y-oq_+P`7a9xg09{#sAMjuaF=i9+9E0b9XWgH;(4XuqmxBvhE
+
+diff --git a/ThirdTask/src/MainClass.java b/ThirdTask/src/MainClass.java
+index 89a2707..77c5f46 100644
+--- a/ThirdTask/src/MainClass.java
++++ b/ThirdTask/src/MainClass.java
+@@ -1,17 +1,22 @@
++import java.util.concurrent.TimeUnit;
++
+ public class MainClass {
+     public static void main(String abc[]){
+ 
++
++
++
+ //        "1. Write a java program to understand the difference between String literal and String Object. Also use ""equals()"" method and ""=="" operator to compare these Strings.
+ 
+         String first = "Helloworld";
+         String second = "Helloworld";
+         System.out.println(first.hashCode());
+         System.out.println("It matches only stack memory values rather thay are value or address " + first == second);
+-//        basically the concept is "==" matches the values in stack memory like  when we create a variable [String first]
++//        basically the concept is "==" matches the values in stack memory like  when we create a variable [String firstVar]
+ //        it creats block in string pool in heap memory because it is String literal and stores its address in stack memory
+-//        like first : 101
+-//        then we create variable String second it is also a string litral and its value is same as String first  it save
+-//        in stack memory like second : 101
++//        like firstVar : 101
++//        then we create variable String secondVar it is also a string litral and its value is same as String firstVar  it save
++//        in stack memory like secondVar : 101
+ //        And .equals() method checks the value on the location which is stored in Heap memory OR another reference
+ //        variable's reference
+ 
+@@ -30,23 +35,98 @@ public class MainClass {
+ 
+ 
+ //        2. Write a java program to compare two Strings using ""compareTo()"" method.
+-                    
+ 
+-//        3. Write a java program to make a String(""Java is an Object Oriented Language"") using ""StringBuffer"" and ""StringBuilder"" and
++        String firstVar = "aa";
++        String secondVar = "aA";
++        System.out.println("\n\n CompareTo() METHOD EXAMPLE : "+firstVar.compareTo(secondVar));
++
++//        compareTo() method first of all it works in lexicographically  order MEANS it compare words by picking one by one
++//        when it starts comparing it gets first character of a String then compare it with first character of a Second
++//        variable if thay are same in CASE and value it retruns 0 when variable has only one character
++
++//        If variables had multiple characters firstly it compares first character of both variables if thay has same CASE and
++//        value then it takes Second character and compares them if thay also has same case and value it takes third one
++//        and compares it if third character has different case or value it returns its difference and stops the comperision and didnot
++//        go further comperision of characters
++
++
++        //        3. Write a java program to make a String(""Java is an Object Oriented Language"") using ""StringBuffer"" and ""StringBuilder"" and
+ //        also traverse through both the Strings and print the traversal time in milliseconds. Also observe which String class is faster than the other.
+-//
++
++        System.out.println("STRING BUILDER RESULT !!!!!!!!");
++        testStringBuilder();
++
++        System.out.println("STRING BUILDER RESULT !!!!!!!!");
++        testStringBuffer();
++
+ //        4. Write a java program to capitalize each word in string.
+-//
++            StringBuffer str1 = new StringBuffer();
++
++            String abcd = "Java is an Object Oriented Language";
++        for (int a: abcd.toCharArray()) {
++            if(a>=97 && a<=122 ){
++                a-= 32;
++                str1.append((char)a);
++            }
++            else{
++                str1.append((char)a);
++            }
++        }
++
++
++        System.out.println("\n\n\n"+str1.toString());
+ //        5. Write a Java program to count the number of Prime Numbers less than a given positive number.
+-//                Hint: To complete the above program, you can also start with a program to find if any given number is prime or not?"
++//         Hint: To complete the above program, you can also start with a program to find if any given number is prime or not?"
+ //
+ 
++        
++
++
+ 
+ 
+ 
+ 
+ 
+ 
++    }
++
++
++        public static void testStringBuffer(){
++
++
++            long starttime = System.nanoTime();
++
++            StringBuffer sb = new StringBuffer("Java is an Object Oriented Language");
++            int length = sb.length();
++            int i = 0;
++            for (; i < length; i++)
++                System.out.println("char no : "+(i+1)+" char is : "+ sb.charAt(i));
++
++
++            long mytime = System.nanoTime() - starttime;
++
++            System.out.println(mytime);
++            System.out.println((mytime/100000));
++        }
+ 
++    public static void testStringBuilder(){
++
++
++        long starttime = System.nanoTime();
++
++        StringBuilder sb = new StringBuilder("Java is an Object Oriented Language");
++        int length = sb.length();
++        int i = 0;
++        for (; i < length; i++)
++            System.out.println("char no : "+(i+1)+" char is : "+ sb.charAt(i));
++
++
++        long mytime = System.nanoTime() - starttime;
++
++        System.out.println(mytime);
++        System.out.println((mytime/100000));
+     }
++
++
++
+ }
+-- 
+2.32.0.windows.2
+

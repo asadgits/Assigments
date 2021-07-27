@@ -1,0 +1,250 @@
+From 6b0f9fab8eecbbb232c51a0d9f47d431c57e98a1 Mon Sep 17 00:00:00 2001
+From: asadgits <iamasadiqbal@gmail.com>
+Date: Mon, 26 Jul 2021 17:07:31 +0500
+Subject: [PATCH 11/12] updating task 3
+
+---
+ FirstTask/.idea/misc.xml                      |   6 ++
+ FirstTask/.idea/workspace.xml                 |  72 ++++++++++++++++++
+ .../out/production/ThirdTask/MainClass.class  | Bin 1110 -> 1541 bytes
+ .../production/ThirdTask/fifth/Fifth.class    | Bin 870 -> 833 bytes
+ ThirdTask/src/MainClass.java                  |   6 +-
+ ThirdTask/src/fifth/Fifth.java                |  46 ++++++-----
+ 6 files changed, 103 insertions(+), 27 deletions(-)
+ create mode 100644 FirstTask/.idea/misc.xml
+ create mode 100644 FirstTask/.idea/workspace.xml
+
+diff --git a/FirstTask/.idea/misc.xml b/FirstTask/.idea/misc.xml
+new file mode 100644
+index 0000000..cc6eae0
+--- /dev/null
++++ b/FirstTask/.idea/misc.xml
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager" version="2" default="true">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+diff --git a/FirstTask/.idea/workspace.xml b/FirstTask/.idea/workspace.xml
+new file mode 100644
+index 0000000..4cf82b9
+--- /dev/null
++++ b/FirstTask/.idea/workspace.xml
+@@ -0,0 +1,72 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ChangeListManager">
++    <list default="true" id="bc42b58c-bfd9-41bb-a763-72077d0c9f93" name="Default Changelist" comment="" />
++    <option name="SHOW_DIALOG" value="false" />
++    <option name="HIGHLIGHT_CONFLICTS" value="true" />
++    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++    <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="Git.Settings">
++    <option name="PUSH_TAGS">
++      <GitPushTagMode>
++        <option name="argument" value="--follow-tags" />
++        <option name="title" value="Current Branch" />
++      </GitPushTagMode>
++    </option>
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
++  </component>
++  <component name="ProjectId" id="1vqOJzbY4JlRA4o68anf4j4gNdq" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
++  </component>
++  <component name="PropertiesComponent">
++    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
++    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
++    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ThirdTask" />
++    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
++  </component>
++  <component name="RunManager">
++    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="Main" />
++      <module name="FirstTask" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <recent_temporary>
++      <list>
++        <item itemvalue="Application.Main" />
++      </list>
++    </recent_temporary>
++  </component>
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
++  <component name="TaskManager">
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="bc42b58c-bfd9-41bb-a763-72077d0c9f93" name="Default Changelist" comment="" />
++      <created>1627286085277</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1627286085277</updated>
++    </task>
++    <servers />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
++  <component name="VcsManagerConfiguration">
++    <ignored-roots>
++      <path value="$PROJECT_DIR$" />
++    </ignored-roots>
++  </component>
++</project>
+\ No newline at end of file
+diff --git a/ThirdTask/out/production/ThirdTask/MainClass.class b/ThirdTask/out/production/ThirdTask/MainClass.class
+index 661fa61e3a5803ba1200bf9b3feab9494df7cedd..512e1ff8925c1afa3f55d4fe0077f48f00a113ca 100644
+GIT binary patch
+delta 720
+zcmaJ;O>a^`6g?OE00~CxM@)k;7;B^^4aR6yo)#@yi&Cgkty;C6(viOMcthSyn{>s>
+zU%<wlf51&OX_GGe0j^xR@h|urj29jOOpS|~d+(WZ&%Gz}BlbQK|MvUfD}dX0yBq&V
+zp^<d^6D4ye7`mRo6mAgCG(=tIl~)yJ$uS$8X(K$N38&MAiQ=Z%78zG~wM@nMj#smz
+zxb@{HU7{A@_>59U8(%c%rP)yH`d9={;&_Tm6pJ1CXN2*Afa7hey6ou$6K6%$D1V3W
+zAw4vyM+`*ggtzWWJzi9*zSXq*v{rwkK2*#6)w#ISlmmXBzC6S)uWibzv4?H;B=W*_
+zD~^$N3`>M$X{)g&eVtP8QVYJ*kf~BDK(Z+!BnqA<{k$u*mO6@8go}r4|I1AjuL<Y=
+zPbEYG>o|{_2=UK>Z^D9w2!||}8IHu!y1WnC?Y`T5cb<VG{P{p4Am9$ByI2l)8R<0t
+zLYSGrYFmU07q0GOGHZRt$uVmWR}OFu*h6xlIfbL`@8L;Z=3Q2Bud6*B^m8@CIx)OJ
+z9`{-O6pDC&S>E<6*AFqrlXC2$fJYcX8KZd242#iu?hB#BSf`)8@p;ZVK%BFeSjHQS
+F{Q+NqvO@p>
+
+delta 269
+zcmXAj+e!ja7=^z*&Q2SKh!P<bLWr^pK{{!pS!$>0h&M`fm-r|?!8||@&`lN?bkPI!
+z0KG_8-9&447kjb(pY^YAPr|QU@cH}x0kpW829G9VD{=B<iur&NyCJLW8T?ATImps@
+zwcds)P^ONj6Ql;qoOC~V_6ysQcIgE3G^L^QR^<n7*XA(I%75c438Uo4kJp36tv9NX
+zU9mH2!xxsFnXxlf#3QYZSV+dUde;|xNP`DD4$=Ov;Yc&&xTi}`kUX~>bE4}KXPoL~
+V1YhHvSm-`WTyUw+8?GGV`VRxwBYXe=
+
+diff --git a/ThirdTask/out/production/ThirdTask/fifth/Fifth.class b/ThirdTask/out/production/ThirdTask/fifth/Fifth.class
+index 6a8c24a724e1521785f19b0a87ca2adf33f5d148..a080906292eaedaf219606522d3bab25382e6bf4 100644
+GIT binary patch
+literal 833
+zcmZuvOK%cU7(JJ{GgDwFP&(8WTCG+EVkEH%8fi&W6A}`9L=5`@hjx%x=wRZWU*XDh
+z(~TRA*2INt<G=84m{>e_AdMzMa_{#%-#Oo%9~WQ00oX$!j1V*v(t-{{AlmUd{&BIY
+zP67S7GdOYuL@mOyB@1Ch1d{FHWZ*v=dwuuGq~CJKCjv58%d^Nr%*3*VI1&PhuJhU{
+z_6SjY+UmM(U%=S&2A*FL&~o`^7%NDbShZjy{ZD!0&57^!Sv8!n$*u=L-mu7-1Ha*q
+zU8i4;;0o4FY*@%3E0Fq6jet2)9lgPvV3Udh?!o*TgO7$UDKB341`8=KoK}yKmHM#l
+z^qS7tQ~n|-{bP?(WA(pwROWKJ1nTshBbpx54c}?MdhCoAU6ICcGH$z7PvJ&_#okq1
+zvCWlQd<0HYyQihm-ozHqtMqo67reuT!Y7DxnD6O?aE+%iPY?ox2#RnWH|S9evOE<)
+zmDM5Mk-`^53z^RlALz{ymN`uIO2qi6@c=13uU;UrFQ6qD<+Cp^f74S`54DP3lD5p8
+z;(^@POS-Mw@)TRPwDr+jENS~^NPa}p*3Ypv)y3KDXI8$0G1bIW()+%t)M$a45;*{?
+zM79w{n%)}!>(sD8UK#9gDR&sT$H;wlJY?Mg)o!z^LN*C9-r=pYa~C&hg=m*?i<VSe
+uFBKhLDmoyh!TGnD&%?N2LWmh<8YV(Q{eaXje$6vxq>2S=7Ra$7g!~^MK!WQ4
+
+literal 870
+zcmYk4%Wl&^6o&utCC<f(o3x=&Cv|Izlz2fl2o{uV5S1*2iztdzc21g7m(-~ehbQPW
+zAkigVbkhwIEfNbJfLB4{0Z^g*<5&S%9-ldvf4+0Z-~W9524E9+a!{Ze&`jva2o(0h
+zy?DR1C0Bv`Bo4;$%OH9)5D>o1&6>!`#O#x3HwonFESNA+6e#yc(<pv14i5*<riZ=3
+zcp{)Te81`EVPU~Q*+d140t*MhyP!3saO-*RV9<{RGMix(#%%$$(d<gms)-v|7BIp|
+zq9~v>{N`&aCZ{BcKAn$8yQH%^VU!;FD(DUAsdPsDVAu`Dq1>lVE#40aRqXuN=ff1T
+z%N|3<w&S4x_GxgGmWYUh*d9&C{lQi!h4aaD?#dRhPEd=JRM-~>NUI{}!><N`o4Cbw
+zg}Vn(X#qvg`wYR?xJ3S(4h1&XOcKnYM%$bvqK;MW*asZ0Qe=nOD!-QZ1trhEpiu1s
+z#wWUFG8LXG1vC^%QQ~7Il54ZFRFVP-tK_i~T7~tz!1S2+-06%tYTLfARkhkFs$NyQ
+z#L@?3j#Y82iL>h;bxE%#^ebuO3Kmho5}zuTY1cUb+0i}9>9p6FCjp%~h%*Oq<{+{v
+zL*;d57NGuyE=2hk6BYSCq>Lv_kW#Mt$ktAwtLJ*VZtKI3DBJa;6X_u7+4WEDAEt{e
+zD^{uFz#vQxE{A)Y$8B)DE<KF|*Q0WQEl6BBZg-CB(w0}HFeV|D1hNF}3OR8FAxe@{
+JP*dK>#$V#qb%_7~
+
+diff --git a/ThirdTask/src/MainClass.java b/ThirdTask/src/MainClass.java
+index 5bc0ce4..b8d3f26 100644
+--- a/ThirdTask/src/MainClass.java
++++ b/ThirdTask/src/MainClass.java
+@@ -51,9 +51,9 @@ public class MainClass {
+ //        5. Write a Java program to count the number of Prime Numbers less than a given positive number.
+ //         Hint: To complete the above program, you can also start with a program to find if any given number is prime or not?"
+ //
+-        Fifth fifth = new Fifth(10 , 50);
+-        fifth.count();
+-        System.out.println(fifth.count());
++        Fifth fifth = new Fifth( 50);
++
++        System.out.println("Numbers of Prime Numbers: " + fifth.count());
+ 
+ 
+ 
+diff --git a/ThirdTask/src/fifth/Fifth.java b/ThirdTask/src/fifth/Fifth.java
+index f242b26..64c7def 100644
+--- a/ThirdTask/src/fifth/Fifth.java
++++ b/ThirdTask/src/fifth/Fifth.java
+@@ -2,43 +2,41 @@ package fifth;
+ 
+ public class Fifth {
+ 
+-    private final int startRange;
+-    private final int EndRange;
++    private final int Range;
++
+ 
+     public int count() {
+-        return countPrimeNumbers(startRange , EndRange);
++        return countPrimeNumbers(Range);
+     }
+ 
+-    public Fifth(int startRange , int EndRange) {
+-        this.startRange = startRange;
+-        this.EndRange = EndRange;
++    public Fifth(int Range) {
++        this.Range = Range;
++
+     }
+ 
+-    private int countPrimeNumbers(int startRange , int EndRange){
++    private int countPrimeNumbers(int Range) {
++
++        int flag;
+         int count = 0;
+-        for (int i= startRange; i <= EndRange; i++){
+-            if(isPrime(i)){
++        for (int i = 2; i < Range; i++) {
++            flag=1;
++            for (int j = 2; j < i; j++) {
++
++                if (i % j == 0) {
++                    flag = 0;
++                    break;
++                }
++                System.out.println(j);
++            }
++            if (flag == 1) {
+                 count++;
+             }
+         }
+-        return count;
++    return count;
+     }
+ 
+ 
+ 
+-    private boolean isPrime(int n) {
+-        int count=0;
+-        if (n <= 1) {
+-            return false;
+-        }
+-        for (int i = 2; i < n/2; i++) {
+-            if (n % i == 0) {
+-                return false;
+-            }
+-        }// for loop
+-
+-        return true;
+-    }
++}
+ 
+ 
+-}
+-- 
+2.32.0.windows.2
+

@@ -1,0 +1,916 @@
+From 00a090209a2ecf0d2e284b8a9fca14ee2221151b Mon Sep 17 00:00:00 2001
+From: asadgits <iamasadiqbal@gmail.com>
+Date: Thu, 15 Jul 2021 21:33:57 +0500
+Subject: [PATCH 02/12] Task1 : Initial commit
+
+---
+ FirstTask/.idea/.gitignore                    |   3 +
+ FirstTask/.idea/misc.xml                      |   6 +
+ FirstTask/.idea/modules.xml                   |   8 ++
+ FirstTask/FirstTask.iml                       |  11 ++
+ .../production/FirstTask/Five/ClassD.class    | Bin 0 -> 692 bytes
+ .../FirstTask/Five/InterFaceA.class           | Bin 0 -> 128 bytes
+ .../FirstTask/Five/InterfaceB.class           | Bin 0 -> 128 bytes
+ .../FirstTask/Five/InterfaceC.class           | Bin 0 -> 174 bytes
+ .../production/FirstTask/Four/ClassA.class    | Bin 0 -> 490 bytes
+ .../production/FirstTask/Four/ClassB.class    | Bin 0 -> 488 bytes
+ .../production/FirstTask/Four/ClassC.class    | Bin 0 -> 263 bytes
+ .../production/FirstTask/Four/ClassD.class    | Bin 0 -> 490 bytes
+ FirstTask/out/production/FirstTask/Main.class | Bin 0 -> 2793 bytes
+ .../FirstTask/TaskOne/Student.class           | Bin 0 -> 567 bytes
+ .../FirstTask/TaskThree/ClassA.class          | Bin 0 -> 502 bytes
+ .../FirstTask/TaskThree/ClassB.class          | Bin 0 -> 500 bytes
+ .../FirstTask/TaskTwo/SingleTon.class         | Bin 0 -> 434 bytes
+ .../FirstTask/threePointFour/Company.class    | Bin 0 -> 540 bytes
+ .../FirstTask/threePointFour/Emplyee.class    | Bin 0 -> 520 bytes
+ .../FirstTask/threePointThree/Car.class       | Bin 0 -> 1235 bytes
+ .../FirstTask/threePointThree/CarAC.class     | Bin 0 -> 415 bytes
+ .../threePointTwo/Composeexample.class        | Bin 0 -> 1042 bytes
+ .../FirstTask/threePointTwo/School.class      | Bin 0 -> 435 bytes
+ .../FirstTask/threePointTwo/Student.class     | Bin 0 -> 586 bytes
+ FirstTask/src/Five/ClassD.java                |  16 +++
+ FirstTask/src/Five/InterFaceA.java            |   5 +
+ FirstTask/src/Five/InterfaceB.java            |   5 +
+ FirstTask/src/Five/InterfaceC.java            |   5 +
+ FirstTask/src/Four/ClassA.java                |   8 ++
+ FirstTask/src/Four/ClassB.java                |   8 ++
+ FirstTask/src/Four/ClassC.java                |   5 +
+ FirstTask/src/Four/ClassD.java                |   8 ++
+ FirstTask/src/Main.java                       | 103 ++++++++++++++++++
+ FirstTask/src/TaskOne/Student.java            |  20 ++++
+ FirstTask/src/TaskThree/ClassA.java           |  10 ++
+ FirstTask/src/TaskThree/ClassB.java           |   9 ++
+ FirstTask/src/TaskTwo/SingleTon.java          |  11 ++
+ FirstTask/src/threePointFour/Company.java     |  14 +++
+ FirstTask/src/threePointFour/Emplyee.java     |  16 +++
+ FirstTask/src/threePointThree/Car.java        |  11 ++
+ FirstTask/src/threePointThree/CarAC.java      |  15 +++
+ .../src/threePointTwo/Composeexample.java     |  48 ++++++++
+ 42 files changed, 345 insertions(+)
+ create mode 100644 FirstTask/.idea/.gitignore
+ create mode 100644 FirstTask/.idea/misc.xml
+ create mode 100644 FirstTask/.idea/modules.xml
+ create mode 100644 FirstTask/FirstTask.iml
+ create mode 100644 FirstTask/out/production/FirstTask/Five/ClassD.class
+ create mode 100644 FirstTask/out/production/FirstTask/Five/InterFaceA.class
+ create mode 100644 FirstTask/out/production/FirstTask/Five/InterfaceB.class
+ create mode 100644 FirstTask/out/production/FirstTask/Five/InterfaceC.class
+ create mode 100644 FirstTask/out/production/FirstTask/Four/ClassA.class
+ create mode 100644 FirstTask/out/production/FirstTask/Four/ClassB.class
+ create mode 100644 FirstTask/out/production/FirstTask/Four/ClassC.class
+ create mode 100644 FirstTask/out/production/FirstTask/Four/ClassD.class
+ create mode 100644 FirstTask/out/production/FirstTask/Main.class
+ create mode 100644 FirstTask/out/production/FirstTask/TaskOne/Student.class
+ create mode 100644 FirstTask/out/production/FirstTask/TaskThree/ClassA.class
+ create mode 100644 FirstTask/out/production/FirstTask/TaskThree/ClassB.class
+ create mode 100644 FirstTask/out/production/FirstTask/TaskTwo/SingleTon.class
+ create mode 100644 FirstTask/out/production/FirstTask/threePointFour/Company.class
+ create mode 100644 FirstTask/out/production/FirstTask/threePointFour/Emplyee.class
+ create mode 100644 FirstTask/out/production/FirstTask/threePointThree/Car.class
+ create mode 100644 FirstTask/out/production/FirstTask/threePointThree/CarAC.class
+ create mode 100644 FirstTask/out/production/FirstTask/threePointTwo/Composeexample.class
+ create mode 100644 FirstTask/out/production/FirstTask/threePointTwo/School.class
+ create mode 100644 FirstTask/out/production/FirstTask/threePointTwo/Student.class
+ create mode 100644 FirstTask/src/Five/ClassD.java
+ create mode 100644 FirstTask/src/Five/InterFaceA.java
+ create mode 100644 FirstTask/src/Five/InterfaceB.java
+ create mode 100644 FirstTask/src/Five/InterfaceC.java
+ create mode 100644 FirstTask/src/Four/ClassA.java
+ create mode 100644 FirstTask/src/Four/ClassB.java
+ create mode 100644 FirstTask/src/Four/ClassC.java
+ create mode 100644 FirstTask/src/Four/ClassD.java
+ create mode 100644 FirstTask/src/Main.java
+ create mode 100644 FirstTask/src/TaskOne/Student.java
+ create mode 100644 FirstTask/src/TaskThree/ClassA.java
+ create mode 100644 FirstTask/src/TaskThree/ClassB.java
+ create mode 100644 FirstTask/src/TaskTwo/SingleTon.java
+ create mode 100644 FirstTask/src/threePointFour/Company.java
+ create mode 100644 FirstTask/src/threePointFour/Emplyee.java
+ create mode 100644 FirstTask/src/threePointThree/Car.java
+ create mode 100644 FirstTask/src/threePointThree/CarAC.java
+ create mode 100644 FirstTask/src/threePointTwo/Composeexample.java
+
+diff --git a/FirstTask/.idea/.gitignore b/FirstTask/.idea/.gitignore
+new file mode 100644
+index 0000000..26d3352
+--- /dev/null
++++ b/FirstTask/.idea/.gitignore
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
+diff --git a/FirstTask/.idea/misc.xml b/FirstTask/.idea/misc.xml
+new file mode 100644
+index 0000000..15cec4b
+--- /dev/null
++++ b/FirstTask/.idea/misc.xml
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" default="true" project-jdk-name="16" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+diff --git a/FirstTask/.idea/modules.xml b/FirstTask/.idea/modules.xml
+new file mode 100644
+index 0000000..74e449e
+--- /dev/null
++++ b/FirstTask/.idea/modules.xml
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/FirstTask.iml" filepath="$PROJECT_DIR$/FirstTask.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+diff --git a/FirstTask/FirstTask.iml b/FirstTask/FirstTask.iml
+new file mode 100644
+index 0000000..c90834f
+--- /dev/null
++++ b/FirstTask/FirstTask.iml
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+diff --git a/FirstTask/out/production/FirstTask/Five/ClassD.class b/FirstTask/out/production/FirstTask/Five/ClassD.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..047337df98adcb4a5496734c8c481eff0894cdf6
+GIT binary patch
+literal 692
+zcmZwEOHaZ;5C`!8Lb0WkhxmTu`*E-l4jv$0FeWBMO)%V-vcj6unzm^CSbEUJgCD>T
+zWt^4<HR)w$cXsxd-OShb$0vXW_I0F?R-qWkV2Yu1&mXyIbEj`!ckhK2FibV1BZD)B
+z^ub{#3k_Knx`7;wf9>sOKM+Ieaz}J&t`$MjHE%rW1ns~Rd|1~|U@-iF`*cznieTXO
+zbd)fyqHJIWvkWr{w;0ri(6Ak155{ivKtiR{uOD_a%*SjsW;HCvm0Da;vCNRWkdMM_
+z+T8cgRje`;qr#;V2=9(tqRF5%-JYO>mUP6`XxJ6rE$`Y?DYsmU+a2!7a32?yU?6>l
+zeCrQfXUIffjB_>4H3q%yjyy|T$Pmnp-*Fs%8Jk$5K`^Y)R20fI42o;CGbuC5nWJ~G
+z7h0sSPBA<N(%7JAj2loP2DILqTt1CZAo~inoPR^{7YGL*G8)uBNOpp3CnIwSh)zf@
+V5!p#b77~yGA;m;wm)@De-VcSXcenrm
+
+literal 0
+HcmV?d00001
+
+diff --git a/FirstTask/out/production/FirstTask/Five/InterFaceA.class b/FirstTask/out/production/FirstTask/Five/InterFaceA.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..91fdd9ad8ffb74ecb284884a3feae9dbdf4dd966
+GIT binary patch
+literal 128
+zcmX^0Z`VEs1_m1jPId++Mh1Sj%(7H{&%Bb<BDcikR7Z9O7Dfhvti-ZJ{hY+SbbbG%
+ztkmQZMh4d6jQny#Mh0dL%`ip=uHgLAqU2P!%$!u95eVISAdPH{3_x{2I~W)kfrha%
+Ouz^?%>_C!<fdc?uh8unW
+
+literal 0
+HcmV?d00001
+
+diff --git a/FirstTask/out/production/FirstTask/Five/InterfaceB.class b/FirstTask/out/production/FirstTask/Five/InterfaceB.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..0415e1b2f524b25375ce30f45900080086c50514
+GIT binary patch
+literal 128
+zcmX^0Z`VEs1_m1jPId++Mh1Sj%(7H{&%Bb<qO`>1R3~-@7Dfhvti-ZJ{hY+SbbbG%
+ztkmQZMh4d6jQnyVMh0dL%`ip=uHgLAqU2P!%$!u95eVISAdPH{3_x{2I~W)kfrha%
+Ouz^?%>_C!<fdc?>5F5b&
+
+literal 0
+HcmV?d00001
+
+diff --git a/FirstTask/out/production/FirstTask/Five/InterfaceC.class b/FirstTask/out/production/FirstTask/Five/InterfaceC.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..ce40b01eaeb88041183b1bc7b6904e14d3449f33
+GIT binary patch
+literal 174
+zcmX^0Z`VEs1_m1jUUmj1Mh1Sj%(7H{&%Bb<qO`>1RA+Vu7Dfhvti-ZJ{hY+SbbbG%
+ztkmQZb_O;SrEWl_j_eE^D1spUPK*q!#TohK#*7Ti8k%8@3|ztarA5i9Zkai$K*b1q
+i^gvbs4F#%WU}9ipU<bO15ok3h0~d(Jzzrms7<d4xizgWX
+
+literal 0
+HcmV?d00001
+
+diff --git a/FirstTask/out/production/FirstTask/Four/ClassA.class b/FirstTask/out/production/FirstTask/Four/ClassA.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..90d29c0d578a276f8ea9304dbe276a1e9f5eb105
+GIT binary patch
+literal 490
+zcmZvZ&rZTX5XQfSN}&`%5XJvJf(Lu_05KsXoEkN$;l98Imb6{d7LAXk2TeTq06vs)
+zwiwXFJ<RUTeDnJzyPse09{_qdvyemHgkfU~1%}#!KX5nT(agOWFT^BeDD-3`(<_F2
+zyE7`Gh>{7*Mj7@Wx&M@;A|#bsQd85*KvKE4v5ZnbjRg<8MQk&){JDB`LXpnZ)EUMq
+zbOr%W5~pvWh8+`i8x8C-H2xtlnD?3&L}bxkd1S+qfsAI|&d9_bLwTr{v72H048}lB
+z1w+-7k+@!lV-er+aX^{6rzSiY@mT8nPtr)|GGVBAzZhMDBs4XH<r8@#hEn&JR}L3?
+zP{To!o>DIz=`q2uPbZglrZeYnV9!~(MNyZ5JPs(@D*+C1L^p=xb@L^`w6635vtD^c
+Wbpy~Jr+tbf-atxg$O%<*IQ<4Fc3_AA
+
+literal 0
+HcmV?d00001
+
+diff --git a/FirstTask/out/production/FirstTask/Four/ClassB.class b/FirstTask/out/production/FirstTask/Four/ClassB.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..af1688d91f9b6d0ae153a4f0d1eb1142f509a537
+GIT binary patch
+literal 488
+zcmZvZO;5r=5Qg97!%`@MAo#8I1|ICu1H=O)oEkO3a9_#_OWLk!i^iX&2TeTq1N>3O
+z*<uhA_b`+Bc%PZfetx}w0O;bRhzzm@au)K~V5rXd19yBLPMz!VTzCn?MpuS1xn#(;
+z+9MMMm<Ea#O0fR451-;h1k|M#Bx<-RNGj(hl3_ATBEf@B0h<iXc%~lhKqNCYvDKaJ
+z`8<y8UJ+Gn8K_yPW1FG=kDkG}*EBz*0j=ePbXCI3aN22)3^W-^1GR{pzQ*<#a(y)s
+z3>8;~;%X6$MRd!@K4ogI^0+_Zk<{@|GMCI`%usgM7#)J>of(QlB70&WwZ62RaIP1{
+zDH?Q0{W4(slw@}(a>z6C`Lj2$=d`>_R+oV+_Q+bx2JGX2B8J12_#%Y?<_nBk`4yF4
+Ufc`d(DZp5Rm@CK;RWmsL1~?aB3jhEB
+
+literal 0
+HcmV?d00001
+
+diff --git a/FirstTask/out/production/FirstTask/Four/ClassC.class b/FirstTask/out/production/FirstTask/Four/ClassC.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..332d1563a88762434718667f620f0850f35abad3
+GIT binary patch
+literal 263
+zcmY*T%MQU%5IxggEv@$#SYp8k5Q*HRtHy@dUo>&0+N3SM%SvM51ALU2TM{vgGc)JR
+z<2+yY2Y@L$9xT`{L>(141V2bm*;vLZ&*ubZsuNwz2zGz4c2WJ)B|*q^7ZF;aPNK!>
+zxQVir+QiIs!*r|SwaT>VzoaPkIwv&3-w!$ABl$kP5WFRS-bR5o`+n&_jt=UqL=P^T
+qG+~f!f>7gX%$W=`yn(Kz>@gY{u;DY-KLeZ_fFLwk1#>M%3+*?pIWPhM
+
+literal 0
+HcmV?d00001
+
+diff --git a/FirstTask/out/production/FirstTask/Four/ClassD.class b/FirstTask/out/production/FirstTask/Four/ClassD.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..e4fa4eafce285e052137179b7a2e77483f273ced
+GIT binary patch
+literal 490
+zcmZvZ%TB^T6o&udR$7W6h~mBOz=d79fVhFMs+R=Aet-##X*;GZ8Xrp+nz--*d?@3Y
+zVh|H&aVF>X{U_&qe!YJH=;GKy23Z3+8+jBMs(1W>yFL$R?)CUiOcI7dSB5gVV92)G
+zBNIiK1}qyT*ni50PjMmws!|JTYIrF~D)%OmVKPi2!Glf_8w}0iTs=CMBAKhHGl*2+
+z^n4!2PTxWmn+9q&>eyna|3hFf?lsR3NussXNQWf>8O}QGk%4W7(m*XDH^ufDay>N_
+z3>8m?;%X6$MRd!@K1FJtns9%_BdPtLU@n=<n4#>gF**c^X=(;*NaTqaNZnsrDxB#-
+zae@Y|QojtCUMATc@?82E{rS^3u;(=0B&*Xv7Q1BaWdZiEPaea;s`)&H0p<&gTKN@~
+VUw}RwQRyCqHHf)_98xxeqi+RBU~&Ke
+
+literal 0
+HcmV?d00001
+
+diff --git a/FirstTask/out/production/FirstTask/Main.class b/FirstTask/out/production/FirstTask/Main.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..17fa61e67c520157ff89db2d57f20ccebab7cbf0
+GIT binary patch
+literal 2793
+zcma)8*>@9F9R8+RCYerI0xd)oQ)Nj3jV-8<R<NrrBn3$<0t((FBMF^kN@fDqeZhU-
+zao@%LsOQisImhFJPrmr-i*FuZ^lwnVJ85ko(PK|@=ic9Tf4}ed-8=K+pJ%@V(1$NH
+zw7{dntHTGsf+a`AaS<~`=}2sM=BSZ%6!`lJrGm3vfhXEEp(3DQaa!1uyGuqa<y3M;
+z$<d&~6F@6%ca8QZ#)g6vwCPxc#R|ORqG%`xB^Dy5oN}Rbq&I-2RMTTz+Aq_wT-y6?
+zl@0-PP}hHTcaPMq)Df0C|6a>9$E^TXaX#9gO!f~2a1jj$x_dUuEH0L1L=<d`Hg5NS
+zBwZ64F2SWL*63J^bqbcsQqw1_Sc(~&M%pSV2p%z<d2rgJU5N&h-XNmrQn5kDMr=9<
+z)YP=?7)4@fRS0c+EvJGN+e1Vg;$ny*ak-o&rOOpV!xiXO(W7HCwkTNULU^vV0(DCI
+znoO*{N!48w0bIotQvJ!{$nJri!-MHmq_eX##P)C1u?=wrD~e*$7_>@R;p{6odCqJ{
+zlpI?@JldqXCZeuJa8>kiTNj&r*)U>*rm*b+4ZZNlVTX=uCE<LdhG|+-GN5BnO1yU7
+zI-z1%!G(_W++(pk*@8i<IAz&}ahoVknZ#yDMjFDXjxp)i>f(^f<}J&V@?AO-Qm)tJ
+zHL9u@CysS-Yq^QChNKLa#PvG%N;khuqd%)6t)OGUVZ^GGW5Y~f+8{|MBuU9V&#JK>
+zxoHafB>@j8h&E|OBSvGgJ2%y0Yzg3yWVI+3MNY*n^X;xU1vA!PE{o|z!RApr3{NYv
+zpoyX5Rvb~V$fbpACrwB$k;|ROh8kacyAG%*G}a@L6{Tqnc}&UzOm03`z&~Mo<>4pE
+zT3rO(ZVqWEO3;cJP*Iku!tuFAQ*}(Lj-jICxWv;Z@!YK9HkO+d1xE4?S~=bfixY*C
+zF<vQVjB;9JO!uy^vcjAY<$_$#3B69fKt}o#(z%!3MK?%C^k5^dUF?fTWU?%yiB>_2
+z-OZ!z^0@9AW6&16M`r3+B^oSiLi9N;t(1(s)XwL(jFIKOs}l>9Y2+@g6dJYH8_g3@
+zMliVh$~t8|>0CYc_ZuXk?Dmpc{R@pEHd!{bNr<^VGla*=997VksB0#rUP`$&#S4w3
+zxFc~+Kc=VVd$QrYt^58h=k1KrmU2XPGAX9qhN`$vftKQF${HgD+4Z1o?B$ZntZBfq
+z9NQ_2sifiLt(?8sk9Rb@i}zH#FK?|66s%czp%hBTtx5ShlJAw;MK&U`j#ZvkaH{?!
+z&KcH%j*3#wH0(7A%bKiA^)}L|PI8W8ng}#8uczAld20+YC`>a|a137arxje2F|wj!
+z8<BKgOh@t}7qR*F<HY7QoHKY+M<QCJ7OguHk0|qt9=YJ<HdZPbW%o21wu(;_tZjg$
+zS+y!YBT4_;R30`L8g$|WKNI9%3wQ$H=Qzz(j8BD6--cNzU%BerIZ8FqhC4XwH3Qs<
+zySNJCZrno&om=`CXc1+9RH5#lMKG~3q@97jF|_0iLK{QvXRtzQLKlRVgf5)L>f|@*
+z9Op0Yy)5kg5S?FRedw|o#N_kJ+LMa2xEkQ9ie3i2ChiOSX0Tlj{Z$N6G!plR{WG{u
+z4m+zzQnWj+hSeGDsUo#MbVEoB?VH7o@qoKL7`nN(3|4WNwj!>DwQ%5DWLmI~vtVsj
+zMSg!+o5j(1YZXP>S#dqA&tR&GV_ezsws6}F9Ep(^5~JI(n&WZ=&`uOOI9q`W_>~hS
+z*qitb(v3B&WG!}J9j?QA+<+b&;%7h>TX;)v<;A*<_iCIN@4!jEN*~1tPGJ<Mu@hfn
+z7tZqK_XEc96At2M+=O2s@EbDto$n0Um#1pj<6hjyRRF)@emua=MCo;svleFYJs!kE
+z@GzGu9_Gx;44%Rx+{?%P@4#btoV`BDe4fCQ{Q5eDH1$t2+Gz~q8P0;tr4P^IIcUt}
+zB0P^5(8_$4<3+qgZv007m+9ArSD1z5O3nUN+P_B0N+^G^bf1dXRjBU&B`VPYvwDML
+b3*N+Ad<N+GHh&-DBd#>gKE|i`9O1tKQ4`4y
+
+literal 0
+HcmV?d00001
+
+diff --git a/FirstTask/out/production/FirstTask/TaskOne/Student.class b/FirstTask/out/production/FirstTask/TaskOne/Student.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..27c0d770abffef2bdf2232ef575ef47fd3baff61
+GIT binary patch
+literal 567
+zcma)2%TB^j6r5YyBDGk+if<ElP#;|zh#M1E1QH?aFHo>pZj(~{FBinbg&*KY8P6$A
+zNOWVGoYy@wojG6MAD;l)xUit1P=s#7fGJR!%U9_~QqBC{XdaAH0ka*dFufNjG@8Q_
+zc2Fw9vat(Wz!}KpOHT!UKV3}%McaB;E&_pCXG_#ilTgiC4BfNgFwU6r8c(V=YCJKY
+z;wb9IMDP$#h`{NDD(J2jqaYc`QIt`}V;K!)5^|pp_4GMh3RFA4gtP?i8h<tXXVM&!
+z2$i`orkiXgBu<eys~@kDaqt+jAUijG%T{qoW;D8K0fKKs6`9C0Iiy~r2_2c@K6O52
+zLD}%$A>OiQmm)s{77i%dn+4QyNF9TZC^9%AGM%!^VDD;;qIbPU*}GYzvgN81f?0Hw
+lQNkX54xy_Vx3|IP+{A?A{C_S^sA4NFPN`x;XVhsp{{cf%Wb6O{
+
+literal 0
+HcmV?d00001
+
+diff --git a/FirstTask/out/production/FirstTask/TaskThree/ClassA.class b/FirstTask/out/production/FirstTask/TaskThree/ClassA.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..84abb9f4d3e5e9372ad6a05881a349e08c223df9
+GIT binary patch
+literal 502
+zcmZvZ%TB^T6o&udRti-RM8#{}feX8I0Wl#6VNt|b!hXOB43^fk#l*+bg(fb103XVD
+z1`J-}EY8WfegDav_m9^%0CgN?5JOx;!ax!!hWwP@bIax4*y;_ZViYl?>e7?ZIYYcs
+z9q33y*N`!gh4HK1c?cshqb`3=LnV6wlD>5nNH21tK=4^Djdg}{r)Aqcv)k%-dKYH<
+zy4N+EcEfSZMh1CoXebycVw0ix4}w9vQ$W`vjmlDFu`MY`Z(OSmG;GmceIDNSCxH-F
+z)8%2<U`RCm8^MsXr6(@uv!Mw3eCSf9VEZHP4tO9{{FO{Z6B(-7Ur>!9*%7YmGh`fp
+z9*jg=DoS>#bE<a6F-r8U>cv3)NRi#9$Rf|kCr@6$9v9^uvZ@TkQ6_6F8?cK#iWv4+
+h!)FT^pg%z?tUV+54Nyk}G`dat2Si^%4yYQ#;U{BPV%h)z
+
+literal 0
+HcmV?d00001
+
+diff --git a/FirstTask/out/production/FirstTask/TaskThree/ClassB.class b/FirstTask/out/production/FirstTask/TaskThree/ClassB.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..b338a5414722f6694d2b9e614ee5877805e889c1
+GIT binary patch
+literal 500
+zcmZvZO;5r=5Qg97tF%->5XJ9$0}uA-0b)W?!l8(<1kVd@V70WSEgFB89yIab5Aa7B
+zcZ-2U-A!gP^UglAJNx<d{sEwY0}Tlz6{K{eks&DbX?WM41dN$2mxf`JAk*L;k4_1a
+z)!INs7ODbGM-I9uzoie<bg4Hsou@EjQ&Hv5B7(9VE8I6P1MWpm6fioiXR%69aXP(g
+zqkG=(^v;a-Rj+Hb?55)wmWBe>6clxouuf3=hd`j*OP=eA7S(x=dG|=9$MxDk!N%WL
+zSOlq-f5Qm!Huu=YY&v8?pAKD-Dcb&sx&s<;8UG|x(S(Om`!x=$E=b|Te<aWxe-?~b
+zn@dP89+q`1uZ%;K#Zcu+fXJ~5yD1`5cp`lI=ndpKmMg+a8AxJFSbbiAZS07MV0Ur&
+fB!&U%3zXu@EAmT#{6dMzioJxW3&@^O6WIR-ckW_s
+
+literal 0
+HcmV?d00001
+
+diff --git a/FirstTask/out/production/FirstTask/TaskTwo/SingleTon.class b/FirstTask/out/production/FirstTask/TaskTwo/SingleTon.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..05fd043b4704230ccbec21a5ec26fa13ee1714f6
+GIT binary patch
+literal 434
+zcmZutyH3ME5S;ZRjvbRHfrbXrBoz1quxOB|EGS|{qP&=sxnOL`ama7+C?bKx2k=pd
+zJrg1%Xm)pIZ|-L9<MZ_$K!|-0222N*4;u|acP<`8kcm7Eu4Z$YRD?#Ta#fuX%+Yx2
+zq6yc5=c5Im(2K?5E?yPEMCEBF<02;*3l<HcKbupJwI;zjFK#5E6RBKYF7IcujKwTt
+zrXLlF$flxH8gEFex>XB;o673P&~P;V=XOFfOtOttZ&EDFL|!O;Z+mO*M5n_c`!F~?
+z!P6;tG8uDxX4;Gb?!?_bUW1-^Fwo(u*SdDO`ril8tK}~G7%-#72lWQ9p5Z()=AgAo
+hYxU>tZl5`-O#rPoG_Tj#d4Z!J`z^2;4Vg2r_XXFqOZor+
+
+literal 0
+HcmV?d00001
+
+diff --git a/FirstTask/out/production/FirstTask/threePointFour/Company.class b/FirstTask/out/production/FirstTask/threePointFour/Company.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..46e5673c1e703957e9e9cee87fa795e167fae083
+GIT binary patch
+literal 540
+zcmaJ;O;5r=6r3#;Y^{Qzh~B&bM*9OGT!@?+HNg<C1vjvyUnyG?ewGJg;=v!_k1|dH
+z5BA`p``(*<Z)W=T>-*yqKpz)243sJ`9qgejP+R&hz8m<_+`XSJ<xC5d`zlg;AW&*|
+zCKmQ#RbV?ffFsb<i&V;oSVejiXQ?}k!^Dr)0@iJq1o2wR6*;{PX{J@+dTOP6ydJB0
+z<m)Vz0^P!O-z$*jRAlN6IM`?xx_h08fH{nx$yD`JB=53tD$_@Q8W5>_@yrh<eyZ|%
+z2by}JXscD!*_o$GNrnl3?(gtA`6ak6n)t_ZZqFWbH#0d>xg}>ObCWLxm)xhpmk|88
+zQN}}N29B5sK1r2%jmQ&Y-e-5;A-Y#@sJyZ&;h5(UBVfTKgGG)ytLC;F4V<vz98Ndv
+UP3F1E7Rgn%dS}d9L=Bw(0I5EEcK`qY
+
+literal 0
+HcmV?d00001
+
+diff --git a/FirstTask/out/production/FirstTask/threePointFour/Emplyee.class b/FirstTask/out/production/FirstTask/threePointFour/Emplyee.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..77a13d24e72e6a8bc75575fcc437483074aaa5e9
+GIT binary patch
+literal 520
+zcmZut%TB^j6r5Ws&k6{L_(0<hs*w+XxFM2|5H!KCC8gZJC8Z^`nD|*Ph=~h7z>hM{
+z1risy=$w0|=S*hK_s{1SfEKROFc3??v~Ym9Kz{DLIt|b9r;W$)T)L4!yrp~<-3!EO
+z^<fH0q!LJ5$iNaPN3&4Mr$G5pCs>7zhsDx+lafnvu^e?L0)^h6;vfo@KW%D_tc9Ew
+zNb0%1vyhrRvQR)#AgjrC;75)djrxIr=nB+o`%3#vw>}gw+rfk$ay{kC{%SFn;j=UL
+z$P{{k>v%&aRJz}hW;9bT0+rtXS(*ZdVi41(OM#TT^`&j42h8lsj?&uJF8iI%i)+R)
+zc;Og7UWy1EcvG2?m8p3067iUw$7z$bWPd=|H)|y9+cggD>KgfX@&?MpGB<z}C)30X
+lvQ#V*PsrNaeN=GDj!HP=U$J?e^QGOCaKZT)*(y5&m%rHlXJ`Nb
+
+literal 0
+HcmV?d00001
+
+diff --git a/FirstTask/out/production/FirstTask/threePointThree/Car.class b/FirstTask/out/production/FirstTask/threePointThree/Car.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..8e87e2a8f352ca58857133233814cd2e1d5e5dc5
+GIT binary patch
+literal 1235
+zcmaJ>?M@Rx6g|@xwyldmu^<XqwAHpM_4|XOQWh#rijtIo#vf#8Cv;)E)9g-B-oQuj
+z8T_X~NigvNd<$R1cz0VVgvK8`d*|+%d(S=h&i?vy^b^1wUPci>P(w&ZANm=FcK9C8
+zS=`>vz24dpRmIRhXWFKE&Javz)-{9~;;QZlu_{elt$9|?;7-8^&42#A9EFB+UM!uV
+zFI_5T)+0ENK@CGXh7n^J>2a1Jz^e>n<sRP(Mm~ZIh-(<tF@}q$C|34eB^ty`wuorF
+z?2|WTZq*@b73B!tpwk*I>9~vuhS7qtX~;&?5w0tp%@zKk(iEb`z)CTaV@k&rB#20Z
+z?+QcORjxKnRVT|;+*U57NS8A0EWSjP!nC*ZQC!6}4M`m-T&EIy&|uJ-9x2QAf}9QE
+z>7*g8BZDj<e4chq*sgFktGvmprrIZ(#TXcFc{Fc(af&_2FoX<Q6AXi8(-yB<jV<A<
+z@hyuyv9hdkYn?l$x9>PZs&0Cf^%6f%-FNHqeSx|Yt;m*B6-CpF6sC^Pcx6&M7Nk_J
+za(Ht^sJg7VgZ+3C#Z$~`$a_rZ7?RzoGVMLND{^h++8P&mRY`}+`*c#64zL|`ncFo>
+zxXH4VyRByatbQjvrw*>|H$@NlyA$~KoaawU*$H8A%c_`4<inuxpDY-O?(ig53U3mX
+z)upAygy|+`Ss3#S6F!8R=JhS{uWyMqf<Z6Ywr~uKyRL9G7!0X1!t|<F!xF>P|Dn{W
+zwm6uk3m2eiX7tdNqcuP_-ELZEXlIb^eT!!g!LmP~y&WF;7>gVt`V9kLe0Yvl@5cZH
+z5hC~<vh?;L+{HcGG2A~6xZx)NQeQEWJ;1;L#*Z)we8=>$=f)9k`kror^AsEi6T=9S
+ml&+g3)kzY>140Dw5Rd5XRrQz>Kl9fYD3C8o`vokbi1EKx;xYgL
+
+literal 0
+HcmV?d00001
+
+diff --git a/FirstTask/out/production/FirstTask/threePointThree/CarAC.class b/FirstTask/out/production/FirstTask/threePointThree/CarAC.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..87bd6d9c20dd708b8843b8f0b0c5da3c387fea12
+GIT binary patch
+literal 415
+zcmZutT}uK%6g_uczqU<nOD%dS=t1{Ee?St*f*{xjC_+y%?hZMkyE3~*{j44&=%F9b
+zkBaVCk1@>Qo;&xRd**(9e|!Sy;mm=BToJa5JPL%`Qap?9O2kjy`}tCa8KKZqvC3`;
+zxmJ5xMhWF292W<03H5BDrF=+KoJ~yB4TSCoghoG@1<87&Wtt{>b}L@S8!00K4UIy@
+zMHMw}-<QRaj8my+q1cE}Wv^T{Amm%aL3>KDgCvrK>PW@%Zo8gKJrVO2XS`7oiq%wT
+zW%ysx&K4>qG)Mm$yCyi}WUE6tP)5Sp+wGV?<C1+@yc2WzZ;UV|8QBjn=ZMi`_GlJn
+z-u!ovf4)P}zuMvOjZ+qm89msHB}NBjma6bM;mpNv8|r8<Gva0p?ISbD;<(Ao!s!n)
+CvrZ%c
+
+literal 0
+HcmV?d00001
+
+diff --git a/FirstTask/out/production/FirstTask/threePointTwo/Composeexample.class b/FirstTask/out/production/FirstTask/threePointTwo/Composeexample.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..1184ba8bfe7bc7dd00944ca0f4d187a095a54e84
+GIT binary patch
+literal 1042
+zcma)5Yi|-k6g>l!UA7CwrBENWg0BK<DaC3Ltdd5fkst{TrXL5`l&$-~W%2c|G*l8z
+z`~m(b;~g-qP@4E*Z|2VIJ?GqeW`6zt{u4kM6$L){B?MF~Ajl9s;_rFR<o03ib?ZoP
+zdkn#{VH@5qgFl^VN{|_ry{@b4b;q#1{SQvA(e65qDMMk1y?p2Lq{~0^q&Mg%``qM~
+z43%M_(kN`@6-bB(rX_~;boG?0;kkx=SUS6tX@+nCnuM5&WyBd)r@8kWtLOA}{Uf(}
+zrq1B&w;2-E>7OP7OA=NX;xk9yprhNKj7!w$+b%baj*Ke|fmbgoH5peK<Y)E#X0fod
+ztssGGLVS{;_+R4BYv;O(8@MUN<{4II#ZDBJLb#1}327A>WT%X2eCm6;MSeH~vL`-a
+zF`QhTX6Vr*b#76$gu5#4VS{?HxkaPV&dO1+iM)g@6$RWU_r``yBQZ!lfos}CHK%J~
+zPy!EBJRDQi##Dhlr$dZORm0Y61FNOG`@ALW(W*|Hn@#Q-BLBM?@VZ8yVQpp*)7F+4
+z7RN#+W-_RgY%(ndrQr<Rw*K4@G_mR04bc};bdh{?>BUD^i6Vpz6#bwJiXg=u%HE7u
+zz^&{EEc*k}ffmvhM+hGyN@?OiyQp2(R!3MnM(PU{_)w%6As7J_AgCBYJfch`NCHBM
+zUK(iq_=KcPRpKo2m3W4T4squja;IqGSpp%1q5OjsIYHVz4=FXo_8cUYkiv73o)C`@
+GPyYZ}uIC5<
+
+literal 0
+HcmV?d00001
+
+diff --git a/FirstTask/out/production/FirstTask/threePointTwo/School.class b/FirstTask/out/production/FirstTask/threePointTwo/School.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..c34613c1c5a7a98ccd96ff00e4384fbcc9415e0c
+GIT binary patch
+literal 435
+zcmZut!A`<J5Pe%(u(eVw2zuitps^nS@j~K>ps|F+<5D+eN!ul*sK4cbn0W95{3zpW
+zHSvJE*_WL+JM-So=hyoOfDuj|7^u`>y0B1XXsq}X4-%fm!R=xtqJp71l9?>787jU0
+z+{OXy8XOmga2Z;~G8f`b$*h<?t00V)N+k?t##6!IPyV`vMJ}^=sO#%4JY8(vi+HLS
+z&U^ds_L=^i`i|8j_4Ot)6Vq+F5c!NRl2S=UJel)c>iCy5i>2H!v?u?W95Ohe+UAkC
+zk-9^3tkSjG2=T(xbt0~`b9BkAL37fF{!0jLosiMC&>%df=s^!r=LT<JgNq$%gUcO`
+qUWqc`6Z$X-PYBzv(Lo(&XcE)?DMO2LdU>S`D{orJAb~bT20Gt|=2$xb
+
+literal 0
+HcmV?d00001
+
+diff --git a/FirstTask/out/production/FirstTask/threePointTwo/Student.class b/FirstTask/out/production/FirstTask/threePointTwo/Student.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..51861146c9f8505cb35fe17d4f4853baa411b89f
+GIT binary patch
+literal 586
+zcma)2O;5r=5PjP(1gjtv@H-xiLQ#7*5HBR22pS>W3oKC5c1bDf-||3AJop3rQO4Oq
+z!a)xnc4lXG-rM))>-*yqKm(^4C{R<-Oz1Eea#Q!&b$mA*I}iOSAH)ns!wbFmjzO(d
+zduePTokGUMHcW<MJc&4e6kZs2Uxd?%7egKrMr*qPXUMlUbe%Zz!f{;^?3&0*v_6t!
+zva@F*FFVGQ@cp(Rf~FV}LAK?EyuAqeJnFiAKcN%@*YCNJC+l@niznWkq1^gYPMzVl
+z@>|J&I@KOY2@@~+XqAnKB!(n0(-Dhk!0$aNtI!m|Ow2idb%UADZ=`RWku!zXtkR)%
+zQG_&}WU@<H0c`;W#R63hWky-I-@)FJXN#hI2F_8WXs!lOLYXQF-lr(RK9OmZEeW=3
+zOQh_pC3fuVC2||C5+Q&Kn!H3B73`u)=vu;UukdSbV#2}tKMRL+lU6Jo(M_d4kEv2{
+F@&hQ|ZNLBk
+
+literal 0
+HcmV?d00001
+
+diff --git a/FirstTask/src/Five/ClassD.java b/FirstTask/src/Five/ClassD.java
+new file mode 100644
+index 0000000..387c0a7
+--- /dev/null
++++ b/FirstTask/src/Five/ClassD.java
+@@ -0,0 +1,16 @@
++package Five;
++
++public class ClassD implements InterfaceC {
++
++    public void show1(){
++        System.out.println("show1 method");
++    }
++
++    public void show2(){
++        System.out.println("show2 method");
++    }
++
++    public void show3(){
++        System.out.println("show3 method");
++    }
++}
+diff --git a/FirstTask/src/Five/InterFaceA.java b/FirstTask/src/Five/InterFaceA.java
+new file mode 100644
+index 0000000..9a55fc3
+--- /dev/null
++++ b/FirstTask/src/Five/InterFaceA.java
+@@ -0,0 +1,5 @@
++package Five;
++
++public interface InterFaceA {
++    public void show1();
++}
+diff --git a/FirstTask/src/Five/InterfaceB.java b/FirstTask/src/Five/InterfaceB.java
+new file mode 100644
+index 0000000..11754d8
+--- /dev/null
++++ b/FirstTask/src/Five/InterfaceB.java
+@@ -0,0 +1,5 @@
++package Five;
++
++public interface InterfaceB {
++    public void show2();
++}
+diff --git a/FirstTask/src/Five/InterfaceC.java b/FirstTask/src/Five/InterfaceC.java
+new file mode 100644
+index 0000000..b2b23f3
+--- /dev/null
++++ b/FirstTask/src/Five/InterfaceC.java
+@@ -0,0 +1,5 @@
++package Five;
++
++public interface InterfaceC extends InterFaceA , InterfaceB {
++    public void show3();
++}
+diff --git a/FirstTask/src/Four/ClassA.java b/FirstTask/src/Four/ClassA.java
+new file mode 100644
+index 0000000..44ad6bf
+--- /dev/null
++++ b/FirstTask/src/Four/ClassA.java
+@@ -0,0 +1,8 @@
++package Four;
++
++abstract class ClassA {
++    public void show(){
++        System.out.println("Show method From Class A");
++    }
++
++}
+diff --git a/FirstTask/src/Four/ClassB.java b/FirstTask/src/Four/ClassB.java
+new file mode 100644
+index 0000000..4f7a1b4
+--- /dev/null
++++ b/FirstTask/src/Four/ClassB.java
+@@ -0,0 +1,8 @@
++package Four;
++
++public class ClassB {
++
++    public void show(){
++        System.out.println("show method of class B");
++    }
++}
+diff --git a/FirstTask/src/Four/ClassC.java b/FirstTask/src/Four/ClassC.java
+new file mode 100644
+index 0000000..92dd959
+--- /dev/null
++++ b/FirstTask/src/Four/ClassC.java
+@@ -0,0 +1,5 @@
++package Four;
++
++abstract class ClassC extends ClassA{
++        public abstract void show();
++}
+diff --git a/FirstTask/src/Four/ClassD.java b/FirstTask/src/Four/ClassD.java
+new file mode 100644
+index 0000000..400a59a
+--- /dev/null
++++ b/FirstTask/src/Four/ClassD.java
+@@ -0,0 +1,8 @@
++package Four;
++
++public class ClassD {
++    public void show(){
++        System.out.println("Show Method From Class D");
++    }
++
++}
+diff --git a/FirstTask/src/Main.java b/FirstTask/src/Main.java
+new file mode 100644
+index 0000000..e15b374
+--- /dev/null
++++ b/FirstTask/src/Main.java
+@@ -0,0 +1,103 @@
++import Four.ClassD;
++import TaskOne.Student;
++import TaskThree.ClassB;
++import TaskTwo.SingleTon;
++import threePointFour.Company;
++import threePointFour.Emplyee;
++import threePointThree.Car;
++import threePointTwo.Composeexample;
++
++import java.util.ArrayList;
++import java.util.List;
++
++public class Main {
++
++    public static void main(String abc[]){
++
++
++//        "1. - Using encapsulation write a program in java that encapsulates Student's information (name, roll no etc)
++
++        Student s1 = new Student();
++        s1.Name = "KHALID";
++        s1.fName = "KHAN";
++        s1.RollNo = "A712";
++
++        Student s2 = new Student("HAMMAD" , "KHAN" , "B123");
++
++//        2. Write a program in java that implements Singleton design pattern.
++//           The program should only make One object and upon creating another object, it should return the same object.
++//           Also confirm this behaviour by prinitng the object.
++//           Another way to determine same object is the ""=="" operator, it should return `true` if you have same object in both references.
++
++
++        SingleTon ston1 =  SingleTon.getObject();
++        SingleTon ston2 =  SingleTon.getObject();
++
++        if(ston1 == ston2){
++            System.out.println("True");
++            System.out.println("SAME OBJECTS !!!");
++            System.out.println("because Thay had same hashCode !!  \n Object1 : "+ ston1 + "\n Object2 : " + ston2);
++        }
++
++
++
++
++//        3. Create an example of Inheritence.
++
++
++//        3.1. Inherit a class.
++
++        ClassB b = new ClassB();
++        b.Hello();
++        b.show();
++
++//        3.2. Compose a class.
++
++        Composeexample cc = new Composeexample();
++        cc.printSchool();
++        cc.printStudent();
++
++//        3.2.1. Compose class with Aggregation.
++
++        //So Car Can exists without AC
++        Car c = new Car();
++        c.showAc();
++
++
++//        3.2.2. Compose class with Composition.
++
++        //but Company cannot exsit without Employees
++        Emplyee e1 = new Emplyee("A123" , "KHALID" , 03322345154);
++
++        Emplyee e2 = new Emplyee("A124" , "Hammad" , 03322345154);
++
++        List<Emplyee> emplst = new ArrayList<Emplyee>();
++        emplst.add(e1);
++        emplst.add(e2);
++
++        Company comp = new Company(emplst);
++
++
++
++
++
++
++//        4. Abstract class and interface. (difference) interface mulitple inheritance
++//        (if both interfaces method same then what is the behaviour, abstract class and interface)
++
++
++
++        //Example of Abstract class that  can extends only one abstract Or normal class
++        ClassD obj=new ClassD();
++        obj.show();
++
++
++
++        //Example of interface that  can extends Multiple Interfaces
++        Five.ClassD obj1=new Five.ClassD();
++        obj1.show3();
++
++
++
++    }
++}
+diff --git a/FirstTask/src/TaskOne/Student.java b/FirstTask/src/TaskOne/Student.java
+new file mode 100644
+index 0000000..9c28d81
+--- /dev/null
++++ b/FirstTask/src/TaskOne/Student.java
+@@ -0,0 +1,20 @@
++package TaskOne;
++
++public class Student {
++
++    public String Name ;
++    public String fName ;
++    public String RollNo ;
++
++
++    public  Student(){};
++
++    public  Student(String name , String fname , String rollno){
++        Name = name;
++        fName = fname ;
++        RollNo = rollno;
++
++    }
++
++
++}
+diff --git a/FirstTask/src/TaskThree/ClassA.java b/FirstTask/src/TaskThree/ClassA.java
+new file mode 100644
+index 0000000..163c239
+--- /dev/null
++++ b/FirstTask/src/TaskThree/ClassA.java
+@@ -0,0 +1,10 @@
++package TaskThree;
++
++public class ClassA  {
++
++    public void Hello(){
++
++        System.out.println("HELLO METHOD FROM CLASS A");
++    }
++
++}
+diff --git a/FirstTask/src/TaskThree/ClassB.java b/FirstTask/src/TaskThree/ClassB.java
+new file mode 100644
+index 0000000..b462508
+--- /dev/null
++++ b/FirstTask/src/TaskThree/ClassB.java
+@@ -0,0 +1,9 @@
++package TaskThree;
++
++public class ClassB extends ClassA {
++
++    public void show(){
++        System.out.println("SHOW METHOD FROM CLASS B");
++
++    }
++}
+diff --git a/FirstTask/src/TaskTwo/SingleTon.java b/FirstTask/src/TaskTwo/SingleTon.java
+new file mode 100644
+index 0000000..fca887b
+--- /dev/null
++++ b/FirstTask/src/TaskTwo/SingleTon.java
+@@ -0,0 +1,11 @@
++package TaskTwo;
++
++public class SingleTon {
++
++    private static SingleTon st = new SingleTon();
++    private SingleTon(){};
++
++    public static SingleTon getObject(){
++        return st;
++    }
++}
+diff --git a/FirstTask/src/threePointFour/Company.java b/FirstTask/src/threePointFour/Company.java
+new file mode 100644
+index 0000000..7de2b43
+--- /dev/null
++++ b/FirstTask/src/threePointFour/Company.java
+@@ -0,0 +1,14 @@
++package threePointFour;
++
++import java.util.List;
++
++public class Company {
++
++    List<Emplyee> Employees ;
++
++    public  Company(List<Emplyee> emp){
++
++    Employees = emp;
++    }
++
++}
+diff --git a/FirstTask/src/threePointFour/Emplyee.java b/FirstTask/src/threePointFour/Emplyee.java
+new file mode 100644
+index 0000000..ace869b
+--- /dev/null
++++ b/FirstTask/src/threePointFour/Emplyee.java
+@@ -0,0 +1,16 @@
++package threePointFour;
++
++public class Emplyee {
++
++    String emp_Id ;
++    String emp_Name ;
++    int emp_Contact_No;
++
++    public Emplyee(String id , String name , int contactNo){
++        emp_Id = id;
++        emp_Name = name;
++        emp_Contact_No = contactNo;
++
++    }
++
++}
+diff --git a/FirstTask/src/threePointThree/Car.java b/FirstTask/src/threePointThree/Car.java
+new file mode 100644
+index 0000000..4c976ad
+--- /dev/null
++++ b/FirstTask/src/threePointThree/Car.java
+@@ -0,0 +1,11 @@
++package threePointThree;
++
++public class Car {
++
++    CarAC ac = new CarAC(5000 , 5.34f);
++
++    public void showAc(){
++        System.out.println("AC Compressor MAX SPEED is :" + ac.AC_Compressor_MaxSpeed);
++        System.out.println("AC Consenser capacity  is :" + ac.AC_Condenser_capacity);
++    }
++}
+diff --git a/FirstTask/src/threePointThree/CarAC.java b/FirstTask/src/threePointThree/CarAC.java
+new file mode 100644
+index 0000000..2cf0ba6
+--- /dev/null
++++ b/FirstTask/src/threePointThree/CarAC.java
+@@ -0,0 +1,15 @@
++package threePointThree;
++
++public class CarAC {
++
++    int AC_Compressor_MaxSpeed ;
++    float AC_Condenser_capacity ;
++
++    public CarAC(int AC_Compressor_MaxSpeed , float AC_Condenser_capacity){
++
++        this.AC_Compressor_MaxSpeed = AC_Compressor_MaxSpeed;
++        this.AC_Condenser_capacity = AC_Condenser_capacity;
++
++
++    }
++}
+diff --git a/FirstTask/src/threePointTwo/Composeexample.java b/FirstTask/src/threePointTwo/Composeexample.java
+new file mode 100644
+index 0000000..5f1a9c7
+--- /dev/null
++++ b/FirstTask/src/threePointTwo/Composeexample.java
+@@ -0,0 +1,48 @@
++package threePointTwo;
++
++    public class Composeexample {
++
++        School sc = new School("Iqra raza tus salam" , "AS321");
++        Student s1 = new Student("khalid" , "KHAN" , "EP109385");
++
++        public  void printSchool(){
++            System.out.println(sc.name);
++        }
++        public  void printStudent(){
++            System.out.println(s1.Name);
++        }
++
++    }
++
++    class School{
++            String name;
++            String RegNo;
++
++            public School(String name , String RegNo){
++                this.name = name;
++                this.RegNo = RegNo;
++
++            }
++
++    }
++
++class Student {
++
++    String Name ;
++    String fName ;
++    String RollNo ;
++
++
++    public  Student(){};
++
++    public  Student(String name , String fname , String rollno){
++        Name = name;
++        fName = fname ;
++        RollNo = rollno;
++
++    }
++
++
++}
++
++
+-- 
+2.32.0.windows.2
+

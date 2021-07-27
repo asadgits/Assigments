@@ -1,0 +1,277 @@
+From 20b8aaf42550f63b36eb9a9a2ed954ee3a6d3d05 Mon Sep 17 00:00:00 2001
+From: asad <iamasadiqbal@gmail.com>
+Date: Mon, 26 Jul 2021 10:26:23 +0500
+Subject: [PATCH 07/12] after some changes from home date: 26/7/2021
+
+---
+ ThirdTask/.idea/vcs.xml                       |   6 +++
+ .../out/production/ThirdTask/MainClass.class  | Bin 3123 -> 1089 bytes
+ .../production/ThirdTask/fifth/Fifth.class    | Bin 0 -> 484 bytes
+ .../production/ThirdTask/first/First.class    | Bin 0 -> 1447 bytes
+ .../production/ThirdTask/fourth/Fourth.class  | Bin 0 -> 1413 bytes
+ .../production/ThirdTask/second/Second.class  | Bin 0 -> 1095 bytes
+ .../production/ThirdTask/third/Third.class    | Bin 0 -> 1669 bytes
+ ThirdTask/src/MainClass.java                  |   4 +-
+ ThirdTask/src/fifth/Fifth.java                |  38 ++++++++++++++++++
+ 9 files changed, 47 insertions(+), 1 deletion(-)
+ create mode 100644 ThirdTask/.idea/vcs.xml
+ create mode 100644 ThirdTask/out/production/ThirdTask/fifth/Fifth.class
+ create mode 100644 ThirdTask/out/production/ThirdTask/first/First.class
+ create mode 100644 ThirdTask/out/production/ThirdTask/fourth/Fourth.class
+ create mode 100644 ThirdTask/out/production/ThirdTask/second/Second.class
+ create mode 100644 ThirdTask/out/production/ThirdTask/third/Third.class
+ create mode 100644 ThirdTask/src/fifth/Fifth.java
+
+diff --git a/ThirdTask/.idea/vcs.xml b/ThirdTask/.idea/vcs.xml
+new file mode 100644
+index 0000000..6c0b863
+--- /dev/null
++++ b/ThirdTask/.idea/vcs.xml
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+diff --git a/ThirdTask/out/production/ThirdTask/MainClass.class b/ThirdTask/out/production/ThirdTask/MainClass.class
+index 010b1d21e47c52f2babf5d1365f2c2c867c5e97a..fcce53eebb8810f3242fb50745b9d8e129fab39b 100644
+GIT binary patch
+literal 1089
+zcmZuw?NZZF5IvWEgr)&X5fB9gMQAAy@dJ?}Dj&saK!+9>!9Qu6LYOvn($pCrOMeu`
+z&iDX6iBI8pZpvVpA(`3D-E;Tc-E%j;|Ni_1U=@anE(8<=HG~irh@F{VO}%0|C;ErN
+znN{=z!mGApdusxLMDjpEw?MRPyLC^`NUK6YK$@rqO)>=BhNGZYpr>vXYfeee`A$WT
+zJg1-8-l^@D^t`kxVhBWV3xf)VGz{bRwGwjQ>Yi04XRX0P1`WSByQY71ZO6-bu4Pu!
+z-MAw#p3CoLcef|j_p`?4*51V4R&L+OPfT7uDn>D;U|hpJOb86zz$2i1k*pPm2PN7k
+z`7-br+c`-m4`i+PH9U|__Ip-c7C>aZVOL6)E76A<rhO4R(Q?^x6(p!fxz=#KQ$6E5
+z6*E$|8AKJ#`I43;X49%jNhk$f!y_!RGP}->tCm18kxd@SZl1_ip31<Hyp$z@$c||{
+z8x^x&XLO@h;_g1fcC6h-wP3k<vru6qZq$lq<-l}pxxNerc_B=S8dnTyQdCJNFqAmH
+zNef<yStwG;8&H9eKOgMa=ol1ohT9V%3%fQOghKvM$dr!hkST4^WXd)9WJ+0z)js7)
+zJI2)<1uj|{TQ=N#)zgB!bWGwI2VOp1AO*s-&$-g+1$}7t9OAnVFVjjGh~NdS*4}^>
+zr2W_`UNRz+|Bx(9|G5R_(>WqWstL7)9)9=jv=F0@@BY9*e58rH^M@Ch>|9K>FvA_m
+zmEcIQiP;uXT+Oe9xMw7E7*j5=(8S~aH7)T^0{YR7IBOc_&oj+|NMH&{z9}qX4oht4
+z6^Cb&UprXFG2Zw+thMXJ8c~oTkJm&5Io@I&8|-70kxgtNz#U`AU>iX)^byZeE`fK<
+H>%#kgq9x|b
+
+literal 3123
+zcmbVO>vJ1d75}ZY^2+iiah1ra($s8d9#WgeEd-}nscT!YYZ)mCw&Nr=&|XWcXl-fN
+z*<Cp}^ufcFXDOsS3I+OLhJ1!$l#bgepXm&L0N<GMh40KTg<&wiyX)9a<S+vs`QEeV
+zo^$T+oZq>3_k(}0y$|3t-bx^Xs0LL>3>^x(7sRsYs|))|-?{k(v+OJAIBnUMKd2y@
+z$<D+PSCAMt>viXv<JK#kNT5rDu45N=-{C&B;`wHSUQUxiQpF&!<@B9*E!&^+T~jo2
+z33TH=4M`n)vF}cApJrDS#B0K<<(-NdY+p#A2m3YLuOp2E3ij?0RDrf6x2W3+)J!2e
+zlVqX?bv%e(1^XLf(abw`S@;(%pMh=97q;&yIGPC&2B{Msch6<pRT6+9cRwVf&t_+2
+z3J>Wxj3ca+d9^9(43^p+EUaTLJ1b3($vS85vben+tNXBmh!Alcm-DdnIH98tk16OZ
+zJB=mbn$ylbybDPv_=HUKlhUGa5A>gs=reJgQqVg!Jy|&Wv@vp_P&_j_X-tkzT_{c)
+zhc^Ba_%sGI<aG84TcfiiEIVHp9uvIJH$6!rt2ENI>J`(K#)CSZ3Yuv9YPD**8ip10
+zY_-;HPq~)B5TbFMQSi_Nd(W^uL)b=GG~=9WnYM3Mj3PU-DXy5ZB4aw9#<+qm-^tg6
+zJM6k*MY55d%gbOBIzEFU*$_)hrd?6+KqlW_i;<?>oE<oXvpUY<JbTS|LSPE^W!gP*
+zNgkDh2{!zcj%i$=gDq@l+G>Q&IU!>mlfxw)mt{Y9)J^+}Uz4gi9iPMJsVYmvJP@)q
+z^GQVUjAZOtmM2r#0VV<VU|v#ImOc~NnHbv{P+odd1JB3)_M&dkQI%M#xFm-;`i6&S
+zPtmf?v(3i5=}wFJI*})fPFd7vgloy?4W;VWEYjRn+~hpR5Dhkf1UlD#F0wNU6v6)j
+z52~0a*u6VgDTq}q*JJw0_7E(NXO<nwSVz@qx_&J%ugW<dxDh1VFf<Be)$`rQ72Mwz
+zY=d25CKd+VHRX%)Vo59o`Dtis_!>{xTwccWh3oqPi^>F*-aON=2%@nPYSTM}4~op1
+zB&LY8Y>rv7l)E>pbwbj@3vI-4d}0(!CDX4t6>m=mzL&r&_`Zf8NZxNKIK0K6WiLC6
+zW?$HZ;Vm^L%D&^Wy<gjYrED06LC1w%shi&6qT?(!mvU`jw`=ZjoL*Tnw=ahK=C<>8
+z`|jEnbR$Gw)az50Z|36op@Ol3Z#0Bou9=?U*!2~IMJ+EH4YNV;#<Hk4x!?-FX1a!7
+z6DtNUvQTX}t|2NF*YrF?iQ~r#4kZ#s{`Os$$r`26>G5-CjL}QOrSrv6V?dg{MrIR<
+z1f`$x49GKO*p6H>0-1LRWd(Y{woNy<vrJFJFBBYUtM*Ps)bIvx$Nz511_>*UL%jMT
+z!KqYv1M@Y?agon`oE6Tohi^go4TT8m9OW{2@EaWU&;T|ZK6PRVSE-?M#HYnB>i&_`
+zib<{XTXa6s!k!jVQd+|U!0}&0Q*T0zw(v2jJl?{`DZY#D%Sr7Pj-K6=22`%6)kp7i
+zpd$20W(Q))M+Q2iQ7qlj!lP?=9BAPrHOYR?@8F3o@yT~FbomxW2DD^;AfAr5Fgnng
+z?tH&L5$*3vb)^z-qd(o5>N?r4r}S>|7Sf!q{|d=f{m*GFrQc|waPcPeO?kCTxw-xa
+zxx3avX$_wZ_Lc>U1_fKd0m@x`(pkJ+d;{#p5$wlftik{eVidiYfq{7(<6W1*0<w4x
+zPhge2d;>Wix6`=6H`D7F#v2&Hd&uJhoWURI`6rCyL+bvD5<cRsElH{JihmDB;lksN
+zqyRpe0h+&K8P`Zq2mXdHQi^c@-(!VRl(Bw?>y%XbzltwWiV?{xL~@Pxuj31N9xs5M
+zg;~5vT^wI#%$E^gX9MvI>?<0&`GcaNXI<{LrHW9cth1kDo4UJ<+ZHxlW})BZ5;|%a
+z3WTrnkl<hZ>i8$(9}#e;e1V4@h`;bzBao?gF!_|^Jej|RnG)OV;$XC2O{ovQjb5^r
+zQq^aVr_>f^*O;Vin^l#Ben_`o^Hhu$J+T%<Fz-X9L3xYY6XX?mhE)?}b)MgWWxnt#
+zWYuI3R&WY646=@6JQS1c2FcG!0#o_QUd7k>w40TGiIt7ecZdvn<e~>pl6j9-gGk|<
+zw2KAR?nY#ti>k`}W#$GG=C{qx30H%JYcgSL=Y$vj?}V=snn&n9K{ttLnF(KG!pltf
+zIzd0jgr8@^FWfWXZ~d<cSHpy(_%@3c!FTXo&IgF&Wv2gXF#aeQe-ey8Wy^vGLBY@Q
+JOT3Bne*l83#-jiL
+
+diff --git a/ThirdTask/out/production/ThirdTask/fifth/Fifth.class b/ThirdTask/out/production/ThirdTask/fifth/Fifth.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..9bcdcb92f986806ab0e7d7bb584d99d279f7b050
+GIT binary patch
+literal 484
+zcmYjM%T5A85UhrQmE|R<AdAsxIDiNF0Erg~2??kPhJ&{O7a8QC%i`U{gkLbmn+Gpk
+zJZU`m0e*^~V2s+cn&?itdb_5&ru+5t`2|1;D<*vK8xRo$5G2g^<b^Eu<?y7q-|E?I
+zmk=zep>lT!{(PZnVh$k#W&~kG2(dqTUAkR@7@s@bBl6`!*+7gC?x>F2Emkx#zdJg%
+z3Gtd5+Iy2h%XSWBtItfbHfqa$Q#wl5zoc-xYD|dM{&{Q@3^hJ*)PTE0zFIgUkm9Iv
+z3|ZW8W&5-)&wf43#%SWS?TXT`nBEv$dT6X8%B$<o2hz(k#<?nTCeDG)N6>?JJ<q7G
+z0Y4Iqkskq)Sl}vzMJzF+n=c_e)0`#l5b)0erR>z2KEb%YMZ(IS-DvWP=>F?X%sfBs
+zy$XXd%|k5npT&Mz#uYvmHn8TsnPT4%GDxvbPm*J8nsbID3}JkLDEZD7#7%mq>^EcX
+BQqTYZ
+
+literal 0
+HcmV?d00001
+
+diff --git a/ThirdTask/out/production/ThirdTask/first/First.class b/ThirdTask/out/production/ThirdTask/first/First.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..53d090a12a5a9762e114ecf9cc7233aebdf0d418
+GIT binary patch
+literal 1447
+zcmaJ>?QR=I6g}gwb({?eZqqh=q}!5|I8AFP-*G6krfwoR1<92WrInbhC-v6r9kV+Q
+z@|*Ak@Ed-lQjvH79*S_r>$FZ2Vc9cx?wot>x%ck+pMPKc4PXn~C1j9wkaLkoL15vT
+zJdo8;Mo+8X?mbh!5h!d0QDANhWY;R~B8mc~Z54+47afP48I&;Vz;!W)H%^4NMu|~<
+zM(H6*7Mo+@Kv%zugUGZ@tYp7d!UEoOP<C++=TAl(!k!8gyE5t4bw`cU@04%>7ad%3
+zv4pn-&YeLj;0$bvFcQeE?Nr)j7W$5hcd;yRu`he7t|MQX?*l{PC^0fJiNLkBRN=UE
+z%47Cg<+RHR@ND)gmi<wsZA*C1#R^v0DfRPEh9p~@CQJKRt30yM_idloUPBzGYdcsM
+znB5QJ#8ex0Ws<b``DPHQ2gClJiXY0oknJcpwJ*cAj01a~ICG{OF#lY0ilfHX#Y1)@
+zKX%&4S3{npruIbnI_l8a*TdL!$MAi-&$W#7d%JQl$x&(%;HySpRg}guZ(2gm@2=J+
+zF|i!%D$~`SWWE5-cne=TxNRr!mB7lY+(C4pd#ajBNQcspzR~eW;MeI6PJk)twv0NV
+zN>-X$_lASo=~|{dCjuXi2I>s>k5l;LQBAof6m=Pft-z>S5qAU{JI3ov<9Ai!=_nj|
+ze2V;@*H?Xt_YPz@<V7q^SH+&`%8@5ymAXA0d$QAsRg!o@z}<-=71u+VBr0+6jlk-u
+z{+v~|gNDHJ|3f*-v`4st3g2@3$$)c3f$Mdis@w(l{Q7f<KgQP^T<tZG#SN}*3cyW*
+zLHmQ_U{NC?PoH0Qnq_DAPt06D#QY%^t@Q$L0~^1=$^DL8_7In?bK?+KY5s+UAIi>i
+zTzl}++RX8ODR<*!03B(Bm6nB-w$8sBpvcn<h1eHr7OOZ<S(mWMxAGqIw)vp#v1Tj(
+z<5c2AeilFBL)>B+1w6q=v@(pU5Os@;_ppplXyx!JBOfDoL=yfrRvaww3*q3x5pSkk
+s8M?#~Ta$kYdkuW*VjRM3pOGnp&+!HKA{A}&_ciYFRH9X<n)_J#4+H;C@Bjb+
+
+literal 0
+HcmV?d00001
+
+diff --git a/ThirdTask/out/production/ThirdTask/fourth/Fourth.class b/ThirdTask/out/production/ThirdTask/fourth/Fourth.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..2e2933ae2019d27a75da9bacb0cb2c3918598255
+GIT binary patch
+literal 1413
+zcmaJ>U2hXd6g?AvjI-V}iNO${rA{&6I0W+<3Z{I-ZJK}+kc@&*1k%Kw#7mrAYj=zk
+zp7{lR>TBVF=k_5;RN@Cz{So~Oyj2JRXT71svQ<l-k2`11J@?+(``3rpZvb3H)xr>B
+z5^);|Bn8GEt0$_|Qtn3S&e~&LHv-A4j_a6f0<pr>ibP7_z!y->_>Q|V*I8fJz6FU`
+z3Tc63x5$!nf}C=55l!xn?`YTPMy^Wkj@r-`M(~xysEsj<_c)F?1=7Z=G?jnT_tmyQ
+zyfC#|30>^7u^(CLQth^O8v;iPm8t4rN#$W2#Dv5l8;5bE*UNTb^cJJ?It(%!5jbAy
+zE(0=@pw(76boY&oqxe=JWxUVA_80p7l{3ueq>b-zOyJ;_+SC=#tt)fiF-@)lqg)dR
+zoGA1uEe{~Ga2zKjPTDA7N?>0%x?XVtvK>loxl})hm9?4{7+Lo^zG;@`yA#t`@fuoS
+zwCcEexwEyV{d;PyMN6jY)m3Xn`A)dsHO5WTq3Y3U4@;R@^E>n_6#t7P4UB(QV4^R!
+z=wT2aS8H{aD$|GH*+|W(`sR{qcb!UH5g1yn2v{|0uIqUxl$VYII2~q!b)54&L#L{}
+zq)pRn1fxk@w{QbDCFa5+@Ou8slW^Q8-li@^^^58<uj<D0`L2H5o4Z|LM7p5dMoS0z
+zs^@KX+U0)fdn`Q{?`^mB0Ql-2eDqcHlzx|@qFSw*V{|!%pO`nxvV?%W=(^gkv{Vr2
+zKw?4QcwcmbL`&QfIQsukeo0Y;m_(7?Ap8wMg#CcyDeg*~1?NQZ6~yn|;~9?OF%ZLP
+zj&=kf^bB_bXaBqWmSmE)M}I;-c!l9=##%bH1ABSq&1^h2o5&`z@#i={lTBQhO=gp0
+z>NiYqdinz6&yxR4XOq9|AanmE(w~>l65{2@zyH92=^cFi8aZGG`A}61p{gP*jtQiw
+zAWhGCuFhc?7iqu2p0hyPGJDQLjCYk65ho^3%z56R&fOSNSiuF};?qM7v$(`KzUTQQ
+z;vd;mk`hG;DKR2(nH9o&6vR8of9X1gGJ!*EuRm~3k>VQvKVqIci>sfph}$^y37e`}
+AO#lD@
+
+literal 0
+HcmV?d00001
+
+diff --git a/ThirdTask/out/production/ThirdTask/second/Second.class b/ThirdTask/out/production/ThirdTask/second/Second.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..376c488044f043d9e5963ba3267ce6dd88dbb4f2
+GIT binary patch
+literal 1095
+zcmaJ>+fLg+5IviO*fFMoa4Wq~(?Xj7CB0t=twhrxkeq^)D6Q0|jk5)V<BjYM5`WU)
+zXdkG=LqDJ&RdpPvB@q-^n%UVs=gjQvu7CYL`w3tJZww@m)Q~bUf;7YUAwT9tkNf+@
+z-R7Zi6hnH$^<DLrA(<~Ubm$BT&UF}(-^{?on1*X6vKSwt*G@tu+QgDw5}CGp!mcdt
+z1+K4ZDiFL~GLXZhhA9)%m>Fg(g6%V89NF&hK-48^<YSRub)-OmQeh`Y`?zjm4mTKP
+z+x$qBrSEX{(NzaD3KjQN7;$$B7ug1G;kJf(6L(-SOkPqWgVu>E_Wb`8(9m#~VJsAm
+z^jpPR&oQLRvLzU@w(E-z-F8z1b>8%7CTB~Bdkr4AQQV(QsRNga%-TaLC2C&KrM&tV
+zHwYDRBKr9O^;<wqifKK7QIp-k5nFDQY&0%sE#gpn-$|)L74S|~r~}ywvuQjs@EA`t
+zJdHZ|jA8Ly-t~{=ktoJl;-+qKN6FxX;p^a0^ntPHHuqbe2p4TBkGh@G#c~H`hKTi(
+zj<^K=c>o{Z$kO0J_9e>P^J=aVB^@sq77W8G|GhW)f>o{5w|C!Ll~0@1J-cG9Ta3Zn
+z@qH1LJsyT4)bN^N>B818+mQx3mieop^k(AiV}ZT|T~Lr^(F-GckD?-ZMt)@Z2iUjX
+z@*>%28AxJ@tQiAv9}g&E$p0gALL_N!HmBLSO!YfPS5{9kafVso6gSW1a!3(OBd|{7
+z3}#^Tq^+3Vmrh~|1uRpFG$yb@Bl;s?m6!=U#2R^>)}o4^<0VA~jb34$ejamw0M!T#
+A1ONa4
+
+literal 0
+HcmV?d00001
+
+diff --git a/ThirdTask/out/production/ThirdTask/third/Third.class b/ThirdTask/out/production/ThirdTask/third/Third.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..64d5934c34ac66dd63d6046497f0bd710b117943
+GIT binary patch
+literal 1669
+zcmb7EQF9Yj6#j0r=_VneB_U~xZ3$8|!P<x-Rf0ttEhMBAO|0Yi;%#zimL|KI-5X~5
+z?)V#gbbRqyABuxB{s8`f@BR?sySp7oX>o>R_UyU$p7WjWyXWqG`rnhk0o=fL3KNLg
+zu+oTQQegU_d?YJ<>F!pxb{?vZ7MQ%@xQ<>Eh?U9=PatU{mBuNgkA%1O1FZ%E30Jya
+z+Zm`Zp<&~+K;b27OZ$$yyFPmGK=}zw3tVilV$lhT(k(_Mi(9^<T&=prCV7nHu1X<;
+ztYMfF$d{V0qE!vA4Dx9dFhjz9<?iZUSihbm;kh)<;Vq865%uJwe8;QYClyUXN)D<9
+zU?Gh~oF_o1C;eLtwMzAJEz6C%kjC4%C@?dSd#dKS9jU){bdO%3rK<x<EY)k}<IGaH
+zgm-Mbn?}iy&xO>FmKLywhDhIyvl1YF`o&}|o0RtrhemnZMuo*+)xAD)`d#Ixu!5{H
+zd1DrATopK_dye0&w2dW3&FiusQ%%QJ_eO&q<+tTdpEKE}*OC2g={sh8IB7ALiZabH
+zj4FGrRbY1OMf(JjRPSpYHd{0VCW0M-*<-s9b(;{P&d1>f5B8&^OiRno-liNLmOe9H
+zBNQhvcLH9xM8H(b8~Giz;TSQgQ0<D@C9+-jJRN9X4mXwVdEH=Y67>`sxND<ny16N^
+z^m0QT_mQ`!Dv`XX!5gxpJ%3-|=kXJF7#M-xk#4uIf~BVC?Tv=jV?@VijwH7ChiZH=
+zs$2bj3?cd!s^e$s5TYjg{g$IuHGwUj3UgSCu2;NX6vfczw?tncU3XpO*ZMLDRAA$4
+zflJ2(pQOV^TVV13L)pVfG%nyHULocegD{r}?Z+Hd_!fM}FF%I(oz4WV(VArwx=Ndl
+z0`Lhw<tT~kFOvTukj=Tff5N``7c$>vryk?X=JEl~uEnldd28WUEdGJnyk-5coVN}z
+z{{%(g082kw;<so2GHp?<#u-tFpGA3afcFfASV-YAQuO1nSmHFVha5{6I5*Eb?F!$k
+zyb9JZ#j`RU(!3hR-bR)8C7AIU|7(<!Bk=-m6170ZpVPBApTRB0#j(!VX-quhqGj30
+zupy+FMD2AVS3;2=7?D>_7Wv^Di_DQyo|FqDJ3~85k#iI|OJV0ocAg>^UMup8Hx;=O
+fiHzY(il4v+Zu6aBm+$bohx;6*=zWD2zQNpc*bsBA
+
+literal 0
+HcmV?d00001
+
+diff --git a/ThirdTask/src/MainClass.java b/ThirdTask/src/MainClass.java
+index 199cf66..d4ab5bc 100644
+--- a/ThirdTask/src/MainClass.java
++++ b/ThirdTask/src/MainClass.java
+@@ -1,3 +1,4 @@
++import fifth.Fifth;
+ import first.First;
+ import fourth.Fourth;
+ import second.Second;
+@@ -50,8 +51,9 @@ public class MainClass {
+ //        5. Write a Java program to count the number of Prime Numbers less than a given positive number.
+ //         Hint: To complete the above program, you can also start with a program to find if any given number is prime or not?"
+ //
++        Fifth fifth = new Fifth();
+ 
+-
++        System.out.println(fifth.isPrime(7));
+ 
+ 
+ 
+diff --git a/ThirdTask/src/fifth/Fifth.java b/ThirdTask/src/fifth/Fifth.java
+new file mode 100644
+index 0000000..c85e7c4
+--- /dev/null
++++ b/ThirdTask/src/fifth/Fifth.java
+@@ -0,0 +1,38 @@
++package fifth;
++
++public class Fifth {
++//    public  void checkPrime(int n){
++//        int loopStart,givenNumberDividebytwo=0,flag=0;
++//        givenNumberDividebytwo=n/2;
++//        if(n==0||n==1){
++//            System.out.println(n+" is not prime number");
++//        }else{
++//            for(loopStart=2;loopStart<=givenNumberDividebytwo;loopStart++){
++//                if(n%loopStart==0){
++//                    System.out.println(n+" is not prime number");
++//                    flag=1;
++//                    break;
++//                }
++//            }
++//            if(flag==0)  { System.out.println(n+" is prime number"); }
++//        }//end of else
++//    }
++
++
++    public static boolean isPrime(int n) {
++        int count=0;
++        if (n <= 1) {
++            return false;
++        }
++        for (int i = 2; i < Math.sqrt(n); i++) {
++            if (n % i == 0) {
++                return false;
++            }else{
++                count++;
++            }
++        }
++        return true;
++    }
++
++
++}
+-- 
+2.32.0.windows.2
+
