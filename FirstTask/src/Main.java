@@ -3,6 +3,7 @@ import Four.Yamaha;
 import TaskOne.Student;
 import TaskThree.Car;
 import TaskTwo.SingleTon;
+import jdk.swing.interop.SwingInterOpUtils;
 import threePointFour.Company;
 import threePointFour.Emplyee;
 import threePointTwo.BigSchoolingSystem;
@@ -50,7 +51,27 @@ public class  Main{
 
         /*System.out.println("THIS IS HASHCODE OF : FIRST INSTANCE : "+result1.hashCode());
         System.out.println("THIS IS REFERENCE OF : FIRST INSTANCE : "+result1.getClass());
-        System.out.println("THIS IS REFERENCE OF : FIRST INSTANCE : "+result1);
+        System.out.println("THIS IS REFERENCE OF : FIRST INSTANCE : "+result1);*/
+
+
+        System.out.println("===========================================================================================");
+        System.out.println("                                     SINGLETON CLASS");
+        System.out.println("===========================================================================================");
+
+        ExecutorService executor = Executors.newFixedThreadPool(7);
+        Future<SingleTon> futureCall = executor.submit(new Callable<SingleTon>() {
+            @Override
+            public SingleTon call() throws Exception {
+                return SingleTon.getObject();
+            }
+        });
+        SingleTon result1= futureCall.get();
+
+
+
+        System.out.println("THIS IS HASHCODE OF : First INSTANCE : " + result1.hashCode());
+        System.out.println("THIS IS REFERENCE OF : First INSTANCE : " + result1.getClass());
+        System.out.println("THIS IS REFERENCE OF : First INSTANCE : " + result1);
 
         Future<SingleTon> futureCall1 = executor.submit(new Callable<SingleTon>() {
             @Override
@@ -59,33 +80,22 @@ public class  Main{
             }
         });
 
-        SingleTon result2 = futureCall.get();*/
-//
-//        ExecutorService executor1 = Executors.newFixedThreadPool(2);
-//        Future<SingleTon> futureCall1 = executor.submit(new Callable<SingleTon>() {
-//            @Override
-//            public SingleTon call() throws Exception {
-//                return SingleTon.getObject();
-//            }
-//        });
-//
-//        Future<SingleTon> futureCall1 = executor.submit(new Callable<SingleTon>() {
-//            @Override
-//            public SingleTon call() throws Exception {
-//                return SingleTon.getObject();
-//            }
-//        });
-//        SingleTon result2 = futureCall1.get(); // Here the thread will be blocked
-//        // until the result came back.
+        SingleTon result2 = futureCall1.get(); // Here the thread will be blocked
+        // until the result came back.
 
-        //System.out.println("THIS IS HASHCODE OF : SECOND INSTANCE : " + result2.hashCode());
-        //System.out.println("THIS IS REFERENCE OF : SECOND INSTANCE : " + result2.getClass());
-        //System.out.println("THIS IS REFERENCE OF : SECOND INSTANCE : " + result2);
+        System.out.println("THIS IS HASHCODE OF : SECOND INSTANCE : " + result2.hashCode());
+        System.out.println("THIS IS REFERENCE OF : SECOND INSTANCE : " + result2.getClass());
+        System.out.println("THIS IS REFERENCE OF : SECOND INSTANCE : " + result2);
+
+        if(result1 == result2){
+            System.out.println("True   SAME OBJECTS !!!");
+            System.out.println("because Thay had same hashCode !!  \n Object1 : "+ result1 + "\n Object2 : " + result2);
+        }
 
 
-
-
-
+        executor.shutdown();
+        System.out.println("===========================================================================================");
+        System.out.println("===========================================================================================");
 
 
 

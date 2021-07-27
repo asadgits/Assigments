@@ -99,11 +99,11 @@ public class SingleTon {
 
     private SingleTon(){
         objectCount++;
-        System.out.println("SINGLETON CLASS");
+//        System.out.println("SINGLETON CLASS");
 
     };
 
-    private static int count;
+//    private static int count;
     public static  SingleTon getObject(){
 
 //        if(ston == null){
@@ -115,17 +115,16 @@ public class SingleTon {
 //            }
 //            count++;
 
+        if(ston == null){
 
             synchronized (SingleTon.class){
 
                 if(ston == null)
                     ston= new SingleTon();
-
-
-
             }
 
-//            ston= new SingleTon();
+        }
+//        ston= new SingleTon();
 
         return ston;
 
