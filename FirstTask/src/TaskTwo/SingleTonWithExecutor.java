@@ -1,6 +1,6 @@
 package TaskTwo;
 
-public class SingleTon {
+public class SingleTonWithExecutor {
     static int objectCount;
 //    this approach is costly and eager loading   So we are moving to lazay loading appproach
     /*
@@ -95,16 +95,16 @@ public class SingleTon {
 
 
 
-    private static SingleTon ston ;
+    private static SingleTonWithExecutor ston ;
 
-    private SingleTon(){
+    private SingleTonWithExecutor(){
         objectCount++;
 //        System.out.println("SINGLETON CLASS");
 
     };
 
 //    private static int count;
-    public static  SingleTon getObject(){
+    public static SingleTonWithExecutor getObject(){
 
 //        if(ston == null){
 //            if(count%2==0) {
@@ -117,10 +117,10 @@ public class SingleTon {
 
         if(ston == null){
 
-            synchronized (SingleTon.class){
+            synchronized (SingleTonWithExecutor.class){
 
                 if(ston == null)
-                    ston= new SingleTon();
+                    ston= new SingleTonWithExecutor();
             }
 
         }
@@ -130,6 +130,16 @@ public class SingleTon {
 
     }
 
+
+
+//    static Map<String, SingleTon> threadStorage = new ConcurrentHashMap();
+//    public static class SingletonThread implements Runnable {
+//
+//        @Override
+//        public void run() {
+//            threadStorage.entrySet()
+//        }
+//    }
 
 // We have another way and best way to perform Single ton which is ENUM
 
