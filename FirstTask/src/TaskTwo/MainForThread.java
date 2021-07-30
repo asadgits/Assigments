@@ -5,48 +5,53 @@ import java.util.Map;
 public class MainForThread {
     public static void main(String[] args) throws InterruptedException {
 
-//through lambda
+        //through lambda
         Thread threadOne = new Thread (() -> {
-            System.out.println("First Thread name :"+Thread.currentThread().getName());
-            SingleTonWithThread singleTon =  SingleTonWithThread.getObject();
-        });
+            SingleTonWithThread.getObject();
+        } , "Thread1");
 
-        threadOne.start();
-        threadOne.join();
-//through normal approch
+
+
+        //through normal approch
        Thread threadTwo = new Thread (new Runnable(){
             public void run(){
-                System.out.println("Second Thread name :"+Thread.currentThread().getName());
-                SingleTonWithThread singleTon1 = SingleTonWithThread.getObject();
+                SingleTonWithThread.getObject();
             }
-        });
-        threadTwo.start();
-        threadTwo.join();
+        } );
+       threadTwo.setName("Thread2");
 
-        System.out.println(SingleTonWithThread.threadStorage);
-        String key[] = new String[2];
-        SingleTonWithThread value[] = new SingleTonWithThread[2];
+
+
+        //through method reference
+        Thread threadThree = new Thread (SingleTonWithThread::getObject, "Thread3");
+        threadThree.start();
+        threadTwo.start();
+        threadOne.start();
+         Thread.sleep(2000);
+
+        System.out.println("FULL HASHMAP PRINT : "+SingleTonWithThread.threadStorage);
+
+        printHashmap(3);
+
+
+
+    }
+
+    public static void printHashmap(int numOfThread){
+        String key[] = new String[numOfThread];
+        SingleTonWithThread value[] = new SingleTonWithThread[numOfThread];
         int i = 0;
         for (Map.Entry mapElement : SingleTonWithThread.threadStorage.entrySet()) {
-             key[i] = (String )mapElement.getKey();
+            key[i] = (String )mapElement.getKey();
             value[i] =(SingleTonWithThread) mapElement.getValue();
-                i++;
+            System.out.println(key[i]+" =  "+value[i]);
+            i++;
         }
-        System.out.println(key[0] + "  "+ value[0]);
-        System.out.println(key[1]+ "  "+ value[1].toString());
 
         if(value[0] == value[1]){
             System.out.println("BOTH OBJECTS ARE SAME !!!! ");
 
         }
-
-//
-//        Map.Entry<String,SingleTonSubClass> entry = SingleTonSubClass.threadStorage.entrySet().iterator().next();
-//        String key= entry.getKey();
-//        SingleTonSubClass value=entry.getValue();
-//        System.out.println(key);
-//        System.out.println(value);
-
-
     }
+
 }
