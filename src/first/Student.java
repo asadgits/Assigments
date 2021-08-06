@@ -1,7 +1,7 @@
 package first;
 
 public class Student {
-    private Integer  id ;
+    private Integer id;
     private String name;
     private String address;
     private Integer age;
@@ -24,12 +24,20 @@ public class Student {
                 '}';
     }
 
-    public Integer getId() {return this.id;}
+    public Integer getId() {
+        return this.id;
+    }
 
-    public String getName() {return this.name;}
+    public String getName() {
+        return this.name;
+    }
 
-    public String getAddress() {return this.address;}
+    public String getAddress() {
+        return this.address;
+    }
 
-    public Integer getAge() {return this.age;}
+    public Integer getAge() {
+        return this.age;
+    }
 
 }

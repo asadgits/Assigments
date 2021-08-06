@@ -10,30 +10,29 @@ import java.util.stream.Collectors;
 
 public class ThirdMain {
     /**
-     * @param args
-     * 3. Write a java program that takes unsorted records of Students inside an ArrayList and
-     *         sorts them in ""Ascending Order"" according to student name.
-     *         NOTE: - If more than one students have same name, then sort the record according to age, in Ascending Order.
-     *         - Use Comparator to sort the Student objects inside the ArrayList.
-     *         - Student class field are ""id"", ""name"" and ""age""."
+     * @param args 3. Write a java program that takes unsorted records of Students inside an ArrayList and
+     *             sorts them in ""Ascending Order"" according to student name.
+     *             NOTE: - If more than one students have same name, then sort the record according to age, in Ascending Order.
+     *             - Use Comparator to sort the Student objects inside the ArrayList.
+     *             - Student class field are ""id"", ""name"" and ""age""."
      */
     public static void main(String[] args) {
 
         List<Student> listStudent = new ArrayList<>();
-        listStudent.add(new Student( 103,"KHALID","garden", 72));
-        listStudent.add(new Student( 101,"ALI","garden", 72));
-        listStudent.add(new Student( 102,"FAHAD","nazimabad", 90));
-        listStudent.add(new Student( 101,"ZAHID","malir",30));
-        listStudent.add(new Student( 101,"FAHAD","malir",60));
-        listStudent.add(new Student( 101,"FAHAD","malir",20));
-        listStudent.add(new Student( 101,"ZAHID","malir",15));
+        listStudent.add(new Student(103, "KHALID", "garden", 72));
+        listStudent.add(new Student(101, "ALI", "garden", 72));
+        listStudent.add(new Student(102, "FAHAD", "nazimabad", 90));
+        listStudent.add(new Student(101, "ZAHID", "malir", 30));
+        listStudent.add(new Student(101, "FAHAD", "malir", 60));
+        listStudent.add(new Student(101, "FAHAD", "malir", 20));
+        listStudent.add(new Student(101, "ZAHID", "malir", 15));
 
         Comparator<Student> studentcomparator = (Student o1, Student o2) -> {
-                if(o1.getName().compareTo(o2.getName()) == 0) {
-                    return o1.getAge().compareTo(o2.getAge());
-                }
-                return o1.getName().compareTo(o2.getName());
-            };
+            if (o1.getName().compareTo(o2.getName()) == 0) {
+                return o1.getAge().compareTo(o2.getAge());
+            }
+            return o1.getName().compareTo(o2.getName());
+        };
 
         listStudent.sort(studentcomparator);
 //        listStudent.forEach(student -> System.out.println(student.getName() +" ->  "+student.getAge()));
