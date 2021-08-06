@@ -1,29 +1,30 @@
 package first;
 
-import javax.swing.text.Style;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Stream;
 
 public class FirstMain {
+    /**
+     * @param args
+     * "1. Write a program in java that searches a perticular item from an ArrayList(items are sorted)
+     *         using JAVA COLLECTION API search methods.
+     */
     public static void main(String[] args) {
-//        "1. Write a program in java that searches a perticular item from an ArrayList(items are sorted)
-//        using JAVA COLLECTION API search methods.
 
-//        List<Student> list = new ArrayList<Student>();
-        List<Student> listStudent = new ArrayList<>();
-        listStudent.add(new Student( 103,"KHALID","garden", 72));
-        listStudent.add(new Student( 102,"HAMMAD","nazimabad", 35));
-        listStudent.add(new Student( 101,"FAHAD","malir",27));
+        List<Student> listStudent = Arrays.asList(  new Student( 130,"KHALID","garden", 72),
+                                                    new Student( 122,"HAMMAD","nazimabad", 35),
+                                                    new Student( 101,"FAHAD","malir",27)
+                                                    );
 
-        Collections.sort(listStudent, (s1,s2)->s1.name.compareTo(s2.name));
-        listStudent.stream().forEach(Student -> System.out.println(Student.name));
-        Stream<Student> studentStream = listStudent.stream();
+        listStudent.sort(Comparator.comparing(Student::getId));
+        listStudent.forEach(Student -> System.out.println(Student.getId()+" -> "+Student.getName()));
 
-        Student student = studentStream.filter(Student -> "KHALID".equals(Student.name)).findAny().orElse(null);
-        System.out.println(student.address);
+        Student student = listStudent.stream().filter(Student -> "KHALID".equals(Student.getName())).findAny().orElse(null);
+//        List<Student> studentList = listStudent.stream().filter(Student -> "KHALID".equals(Student.getName())).limit(4).collect(Collectors.toList());
+        assert student != null;
+        System.out.println(student.getAddress());
 
 
 

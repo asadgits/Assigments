@@ -1,12 +1,10 @@
 package first;
 
-//public class Student implements Comparable<Student>{
-
 public class Student {
-    public Integer  id ;
-    public String name;
-    public String address;
-    public Integer age;
+    private Integer  id ;
+    private String name;
+    private String address;
+    private Integer age;
 
 
     public Student(int id, String name, String address, int age) {
@@ -16,28 +14,22 @@ public class Student {
         this.age = age;
     }
 
-    public int getId() {return id;}
-    public void setId(int id) {this.id = id;}
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", age=" + age +
+                '}';
+    }
 
-    public String getName() {return name;}
-    public void setName(String name) {this.name = name;}
+    public Integer getId() {return this.id;}
 
-    public String getAddress() {return address;}
-    public void setAddress(String address) {this.address = address;}
+    public String getName() {return this.name;}
 
-    public int getAge() {return age;}
-    public void setAge(int age) {this.age = age;}
+    public String getAddress() {return this.address;}
 
-//
-//    public int compareTo(Student s2) {
-//
-//            if(this.id > s2.id)
-//                return 1;
-//            else
-//                return -1;
-//
-//
-//    }
-
+    public Integer getAge() {return this.age;}
 
 }
