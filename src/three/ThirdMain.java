@@ -27,15 +27,20 @@ public class ThirdMain {
         listStudent.add(new Student(101, "FAHAD", "malir", 20));
         listStudent.add(new Student(101, "ZAHID", "malir", 15));
 
-        Comparator<Student> studentcomparator = (o1,o2) -> {
+//        Comparator<Student> studentcomparator = (o1,o2) -> {
+//            if (o1.getName().compareTo(o2.getName()) == 0) {
+//                return o1.getAge().compareTo(o2.getAge());
+//            }
+//            return o1.getName().compareTo(o2.getName());
+//        };
+
+        listStudent.sort((o1,o2) -> {
             if (o1.getName().compareTo(o2.getName()) == 0) {
                 return o1.getAge().compareTo(o2.getAge());
             }
             return o1.getName().compareTo(o2.getName());
-        };
-
-        listStudent.sort(studentcomparator);
-//        listStudent.forEach(student -> System.out.println(student.getName() +" ->  "+student.getAge()));
+        });
+//      listStudent.forEach(student -> System.out.println(student.getName() +" ->  "+student.getAge()));
         listStudent.forEach(System.out::println);
 
     }
