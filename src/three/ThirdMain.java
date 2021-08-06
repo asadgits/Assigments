@@ -32,10 +32,13 @@ public class ThirdMain {
             @Override
             public int compare(Student o1, Student o2) {
                 check =  o1.name.compareTo(o2.name);
-                if(check != 0)
+                if(check != 0) {
                     return check;
-                else
-                    return String.valueOf(o1.age).compareTo(String.valueOf(o2.age));
+                }
+                else {
+                    return o1.age.compareTo(o2.age);
+//                    return  String.valueOf(o1.age).compareTo(String.valueOf(o2.age));
+                }
             }
         };
 

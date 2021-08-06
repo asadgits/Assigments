@@ -3,10 +3,10 @@ package first;
 //public class Student implements Comparable<Student>{
 
 public class Student {
-    public int id ;
+    public Integer  id ;
     public String name;
     public String address;
-    public int age;
+    public Integer age;
 
 
     public Student(int id, String name, String address, int age) {
