@@ -1,9 +1,6 @@
 package first;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 public class FirstMain {
     /**
@@ -17,6 +14,7 @@ public class FirstMain {
                 new Student(122, "HAMMAD", "nazimabad", 35),
                 new Student(101, "FAHAD", "malir", 27)
         );
+
 
         listStudent.sort(Comparator.comparing(Student::getId));
         listStudent.forEach(Student -> System.out.println(Student.getId() + " -> " + Student.getName()));
