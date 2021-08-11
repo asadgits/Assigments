@@ -9,7 +9,7 @@ import static java.lang.System.*;
 public class TimeCalculate {
     public static <T> Long testCollectionParameter(T values){
         if(values instanceof Collection) {
-           return calculateTime((Collection) values);
+           return calculateCollectionTime((Collection) values);
         }
         else {
             return 0L;
@@ -18,10 +18,17 @@ public class TimeCalculate {
 
     }
 
-    private static long calculateTime(Collection c) {
+    private static long calculateCollectionTime(Collection c) {
         long starttime = nanoTime();
         for (Object temp : c) out.println(" ==>" + temp.toString());
         long TotalTimeInNano = nanoTime() - starttime;
         return (TotalTimeInNano / 100000);
     }
+    private static long calculateObjectTime(Object c) {
+        long starttime = nanoTime();
+        out.println(c);
+        long TotalTimeInNano = nanoTime() - starttime;
+        return (TotalTimeInNano / 100000);
+    }
+
 }
