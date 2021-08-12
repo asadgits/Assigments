@@ -19,6 +19,7 @@ public class ResturantImpl implements IResturant{
     }
 
     public Integer getPrice(String dish){
+
         try {
             return priceList.get(dish);
         } catch (NullPointerException e) {
@@ -27,7 +28,18 @@ public class ResturantImpl implements IResturant{
 
 
 
-       /* if(priceList.get(dish)!=null) {
+       /* try {
+            if(priceList.get(dish)!=null){
+
+                return priceList.get(dish);
+            }
+        } catch (NullPointerException e) {
+            throw new CustomNullPointer("\"ITEM NOT FOUND\"");
+        }*/
+
+
+
+        /*if(priceList.get(dish)!=null) {
             return priceList.get(dish);
         }else{
             try {
@@ -37,7 +49,7 @@ public class ResturantImpl implements IResturant{
             }
         }
 
-        return priceList.get(dish);*/
+        return 0;*/
     }
 
 }
