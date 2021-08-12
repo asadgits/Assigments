@@ -14,22 +14,30 @@ public class ResturantImpl implements IResturant{
         priceList.put("beef", 200);
     }
 
-    public Integer getTotal(String[] t1) {
-        return Arrays.stream(t1).mapToInt(i -> (int)getPrice(i) ).sum();
+    public Integer getTotal(String[] menuItems) {
+        return Arrays.stream(menuItems).mapToInt(i -> (int)getPrice(i) ).sum();
     }
 
-    public Object getPrice(String dish){
-
-        try{
-            if(this.priceList.get(dish).equals(null)){
-                return this.priceList.get(dish);
-                throw new  NullPointerException("\"ITEM NOT FOUND\"");
-            };
-
-        }catch(NullPointerException e){
-            return "ITEM NOT FOUND";
+    public Integer getPrice(String dish){
+        try {
+            return priceList.get(dish);
+        } catch (NullPointerException e) {
+            throw new CustomNullPointer("\"ITEM NOT FOUND\"");
         }
 
+
+
+       /* if(priceList.get(dish)!=null) {
+            return priceList.get(dish);
+        }else{
+            try {
+                throw new NullPointerException("\"ITEM NOT FOUND\"");
+            } catch (NullPointerException e) {
+                System.out.println(e);
+            }
+        }
+
+        return priceList.get(dish);*/
     }
 
 }
