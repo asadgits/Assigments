@@ -1,10 +1,10 @@
-package com.nisum.project.firsprojectspringboot;
+package com.example.pos;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class FirsProjectSpringBootApplicationTests {
+class PosApplicationTests {
 
     @Test
     void contextLoads() {

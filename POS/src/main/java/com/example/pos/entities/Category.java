@@ -1,14 +1,14 @@
-package com.nisum.project.entities;
+package com.example.pos.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "tbl_Categories")
-public class Categories {
+public class Category {
+
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer category_id;
     private String category_name;
 
@@ -26,5 +26,13 @@ public class Categories {
 
     public void setCategory_name(String category_name) {
         this.category_name = category_name;
+    }
+
+    @Override
+    public String toString() {
+        return "Categories{" +
+                "category_id=" + category_id +
+                ", category_name='" + category_name + '\'' +
+                '}';
     }
 }
