@@ -18,4 +18,8 @@ public interface ICategory {
     Integer updateRecord(CategoryDTO categoryDTO);
 
     void deleteRecord(Integer id);
+
+    public Category getRecord1(Integer id);
+
+
 }

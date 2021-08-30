@@ -1,5 +1,6 @@
 package com.example.pos.services;
 
+import com.example.pos.exceptionHandler.CustomException;
 import com.example.pos.repositories.CategoryRepository;
 import com.example.pos.dto.CategoryDTO;
 import com.example.pos.entities.Category;
@@ -24,7 +25,6 @@ public class CategoryServiceImpl implements ICategory {
     @Override
     public ResponseEntity<Category> insertRecord(CategoryDTO categoryDTO) {
         return new ResponseEntity<Category>(categoryRepository.save(modelMapper.map(categoryDTO, Category.class)) , HttpStatus.CREATED);
-
     }
 
     @Override
@@ -46,6 +46,18 @@ public class CategoryServiceImpl implements ICategory {
     public Category getRecord(Integer id) {
         return categoryRepository.findById(id).get();
     }
+
+    @Override
+    public Category getRecord1(Integer id) {
+        System.out.println("inside getRecord1 method in to the service impl "+ id);
+        Optional<Category> category = categoryRepository.findById(id);
+        if(!category.isPresent()){
+            throw new CustomException("CUSTOM NULL MSG");
+        }
+        return category.get();
+    }
+
+
 
 
 }
