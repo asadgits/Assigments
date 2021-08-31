@@ -13,8 +13,4 @@ public class PosApplication {
         SpringApplication.run(PosApplication.class, args);
     }
 
-//    @Bean
-//    public ModelMapper modelMapper() {
-//        return new ModelMapper();
-//    }
 }

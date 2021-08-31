@@ -1,17 +1,18 @@
 package com.example.pos.exceptionHandler;
 
-import lombok.Data;
-import org.springframework.stereotype.Component;
+import lombok.Getter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 
-@Component
-@Data
+@Getter
 public class CustomException extends RuntimeException{
+    private HttpStatus status;
 
-    public  CustomException() {
-    }
-
-    public  CustomException(String message){
+    @Autowired
+    public  CustomException(String message , HttpStatus status){
         super(message);
+        this.status = status;
     }
+
 
 }

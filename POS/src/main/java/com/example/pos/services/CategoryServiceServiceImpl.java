@@ -15,12 +15,16 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class CategoryServiceImpl implements ICategory {
-    @Autowired
-    private ModelMapper modelMapper;
+public class CategoryServiceServiceImpl implements CategoryService {
+
+    private final ModelMapper modelMapper;
+    private final CategoryRepository categoryRepository;
 
     @Autowired
-    private CategoryRepository categoryRepository;
+    public CategoryServiceServiceImpl(ModelMapper modelMapper, CategoryRepository categoryRepository) {
+        this.modelMapper = modelMapper;
+        this.categoryRepository = categoryRepository;
+    }
 
     @Override
     public ResponseEntity<Category> insertRecord(CategoryDTO categoryDTO) {
@@ -29,7 +33,7 @@ public class CategoryServiceImpl implements ICategory {
 
     @Override
     public Integer updateRecord(CategoryDTO categoryDTO) {
-        return categoryRepository.save(modelMapper.map(categoryDTO, Category.class)).getCategory_id();
+        return categoryRepository.save(modelMapper.map(categoryDTO, Category.class)).getCategoryId();
     }
 
     @Override
@@ -44,20 +48,10 @@ public class CategoryServiceImpl implements ICategory {
 
     @Override
     public Category getRecord(Integer id) {
-        return categoryRepository.findById(id).get();
-    }
-
-    @Override
-    public Category getRecord1(Integer id) {
-        System.out.println("inside getRecord1 method in to the service impl "+ id);
         Optional<Category> category = categoryRepository.findById(id);
         if(!category.isPresent()){
-            throw new CustomException("CUSTOM NULL MSG");
+            throw new CustomException(" THIS IS CUSTOM NULL POINTER EXCEPTION " , HttpStatus.BAD_REQUEST);
         }
         return category.get();
     }
-
-
-
-
 }

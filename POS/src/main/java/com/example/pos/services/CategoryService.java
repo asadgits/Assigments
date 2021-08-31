@@ -5,9 +5,8 @@ import com.example.pos.entities.Category;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;
-import java.util.Optional;
 
-public interface ICategory {
+public interface CategoryService {
 
     Category getRecord(Integer id);
 
@@ -18,8 +17,5 @@ public interface ICategory {
     Integer updateRecord(CategoryDTO categoryDTO);
 
     void deleteRecord(Integer id);
-
-    public Category getRecord1(Integer id);
-
 
 }

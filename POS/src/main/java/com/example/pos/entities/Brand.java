@@ -9,22 +9,22 @@ import javax.persistence.Table;
 public class Brand {
 
     @Id
-    private Integer brand_id;
-    private String brand_name;
+    private Integer brandId;
+    private String brandName;
 
-    public Integer getBrand_id() {
-        return brand_id;
+    public Integer getBrandId() {
+        return brandId;
     }
 
-    public void setBrand_id(Integer brand_id) {
-        this.brand_id = brand_id;
+    public void setBrandId(Integer brand_id) {
+        this.brandId = brand_id;
     }
 
-    public String getBrand_name() {
-        return brand_name;
+    public String getBrandName() {
+        return brandName;
     }
 
-    public void setBrand_name(String brand_name) {
-        this.brand_name = brand_name;
+    public void setBrandName(String brand_name) {
+        this.brandName = brand_name;
     }
 }
