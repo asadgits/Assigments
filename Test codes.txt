@@ -1,0 +1,60 @@
+
+
+    @GetMapping(path = "/{id}")
+    public Category getRecord(@PathVariable Integer id) {
+        return categoryService.getRecord1(id);
+    }
+
+///header testing
+
+//    @RequestHeader MultiValueMap<String, String> headers) {
+//        headers.forEach((key, value) -> {
+//            LOG.info(String.format(
+//                    "Header '%s' = %s", key, value.stream().collect(Collectors.joining("|"))));
+//        });
+
+/*
+    @GetMapping(path = "/headerdata")
+    public void getHeaderData(@RequestHeader MultiValueMap<String, String> headers) {
+        headers.forEach((key, value) -> {
+            System.out.println(String.format(
+                    "Header '%s' = %s", key, value.stream().collect(Collectors.joining("|"))));
+        });
+    }*/
+
+
+
+
+
+//    @GetMapping(path = "/data")
+//    public void gettRecord(@RequestParam(value = "id") Integer id) {
+//        System.out.println("THIS IS REQUEST PRAM : " + id);
+//    }
+
+
+
+
+
+
+
+//        Map<String, String> errors = new HashMap<>();
+//        ex.getBindingResult().getAllErrors().forEach((error) ->{
+//
+//            String fieldName = ((FieldError) error).getField();
+//            String message = error.getDefaultMessage();
+//            errors.put(fieldName, message);
+//        });
+
+
+
+
+
+
+//        Optional<Category> category = categoryRepository.findById(id);
+//        if(!category.isPresent()){
+//            throw new CustomException(" THIS IS CUSTOM NULL POINTER EXCEPTION " , HttpStatus.BAD_REQUEST);
+//        }
+//        return category.get();
+    
+
+
