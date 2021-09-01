@@ -8,9 +8,9 @@ import javax.validation.constraints.Size;
 @Data
 public class CategoryDTO {
 
-    private Integer category_id;
+    private Integer categoryId;
 
     @Size(min=2 , message = "name should have at least 2 characters")
-    @NotEmpty(message = "test")
-    private String category_name;
+    @NotEmpty(message = "Don't Let the name Empty")
+    private String categoryName;
 }

@@ -5,11 +5,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 
 @Getter
-public class CustomException extends RuntimeException{
-    private HttpStatus status;
+public class ServiceGeneralException extends RuntimeException{
+    private final HttpStatus status;
 
     @Autowired
-    public  CustomException(String message , HttpStatus status){
+    public ServiceGeneralException(String message , HttpStatus status){
         super(message);
         this.status = status;
     }

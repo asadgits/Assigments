@@ -46,3 +46,15 @@
 //        });
 
 
+
+
+
+
+//        Optional<Category> category = categoryRepository.findById(id);
+//        if(!category.isPresent()){
+//            throw new CustomException(" THIS IS CUSTOM NULL POINTER EXCEPTION " , HttpStatus.BAD_REQUEST);
+//        }
+//        return category.get();
+    
+
+
