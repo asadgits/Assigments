@@ -5,10 +5,12 @@ import com.example.pos.entities.Category;
 import com.example.pos.services.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("categoryV1")
@@ -47,3 +49,11 @@ public class CategoryController {
         categoryService.deleteRecord(id);
     }
 }
+
+
+//    private static void accept(String key, List<String> value) {
+//        LOG.info(String.format(
+//                "Header '%s' = %s",
+//                key,
+//                value.stream().collect(Collectors.joining("|"))));
+//    }

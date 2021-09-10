@@ -12,6 +12,9 @@ import static org.mockito.Mockito.when;
 
 public class TestCalculator {
 
+    static{
+        System.out.println("abc");
+    }
 
     //    Calculator calculator = new Calculator((i, j) -> i+j);
 //    CalculatorService calculatorService = mock(CalculatorService.class);

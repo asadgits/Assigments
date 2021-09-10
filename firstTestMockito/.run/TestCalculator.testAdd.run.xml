@@ -1,0 +1,22 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="TestCalculator.testAdd" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+    <module name="firstTestMockito" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="com.nisum.testproject.firsttestmockito.testClasses.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <option name="PACKAGE_NAME" value="com.nisum.testproject.firsttestmockito.testClasses" />
+    <option name="MAIN_CLASS_NAME" value="com.nisum.testproject.firsttestmockito.testClasses.TestCalculator" />
+    <option name="METHOD_NAME" value="testAdd" />
+    <option name="TEST_OBJECT" value="method" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/target" />
+    <envs>
+      <env name="JAVA_HOME" value="C:\Program Files\Java\jdk-16.0.1" />
+    </envs>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
