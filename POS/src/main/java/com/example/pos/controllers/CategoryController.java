@@ -11,7 +11,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("categoryV1")
+@RequestMapping("category/V1")
 
 public class CategoryController {
 

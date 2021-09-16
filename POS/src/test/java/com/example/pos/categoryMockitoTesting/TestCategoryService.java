@@ -2,15 +2,12 @@ package com.example.pos.categoryMockitoTesting;
 
 import com.example.pos.entities.Category;
 import com.example.pos.repositories.CategoryRepository;
-import org.junit.Rule;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
-import org.mockito.MockitoAnnotations;
-import org.mockito.junit.MockitoJUnit;
-import org.mockito.junit.MockitoRule;
-
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.mockito.junit.jupiter.MockitoSettings;
+import org.mockito.quality.Strictness;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,26 +16,12 @@ import java.util.Optional;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 
-@RunWith(org.mockito.junit.MockitoJUnitRunner.class)
+@ExtendWith(MockitoExtension.class)
+@MockitoSettings(strictness = Strictness.LENIENT)
 public class TestCategoryService {
 
-//    CategoryService categoryService = Mockito.mock(CategoryServiceServiceImpl.class);
-//    CategoryController categoryController = new CategoryController(categoryService);
-
-    @InjectMocks
+    @Mock
     CategoryRepository categoryRepository;
-
-
-    @BeforeEach
-    void setup(){
-//        MockitoAnnotations.initMocks(this);
-        MockitoAnnotations.openMocks(this);
-    }
-
-
-    @Rule
-    public MockitoRule rule = MockitoJUnit.rule();
-
 
     @Test
     void getAllDataTest() {
@@ -56,7 +39,8 @@ public class TestCategoryService {
         categoryList.add(category1);
 
         when(categoryRepository.findAll()).thenReturn(categoryList);
-        assertEquals(categoryList, categoryRepository.findAll());
+
+        assertEquals(2, categoryList.size());
     }
 
     @Test
@@ -67,7 +51,33 @@ public class TestCategoryService {
         category.setCategoryName("home");
 
         when(categoryRepository.findById(1)).thenReturn(Optional.of(category));
-        assertEquals(Optional.of(category), categoryRepository.findById(1));
+
+        assertEquals(Optional.of(1),Optional.of(category.getCategoryId()));
+        assertEquals(Optional.of("home"),Optional.of(category.getCategoryName()));
+
+    }
+
+    @Test
+    void insertRecord(){
+        Category category = new Category();
+        category.setCategoryId(1);
+        category.setCategoryName("home");
+        when(categoryRepository.save(category)).thenReturn(category);
+
+        assertEquals(category, categoryRepository.save(category));
+    }
+
+    @Test
+    void updaterecord(){
+
+        Category category = new Category();
+        category.setCategoryId(1);
+        category.setCategoryName("Update Record");
+        Integer id = category.getCategoryId();
+//
+//        when(categoryRepository.save(category)).thenReturn(id);
+//
+//        assertEquals(category, categoryRepository.save(category));
 
     }
 
