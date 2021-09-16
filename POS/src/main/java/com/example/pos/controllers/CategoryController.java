@@ -5,15 +5,13 @@ import com.example.pos.entities.Category;
 import com.example.pos.services.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("categoryV1")
+@RequestMapping("category/V1")
 
 public class CategoryController {
 
