@@ -64,18 +64,19 @@ public class TestCategoryService {
         category.setCategoryName("home");
         when(categoryRepository.save(category)).thenReturn(category);
 
-        assertEquals(category, categoryRepository.save(category));
+        assertEquals(1,category.getCategoryId());
+        assertEquals("home",category.getCategoryName());
     }
 
     @Test
     void updaterecord(){
 
-        Category category = new Category();
-        category.setCategoryId(1);
-        category.setCategoryName("Update Record");
-        Integer id = category.getCategoryId();
-//
-//        when(categoryRepository.save(category)).thenReturn(id);
+//        Category category = new Category();
+//        category.setCategoryId(1);
+//        category.setCategoryName("Update Record");
+//        Integer id = category.getCategoryId();
+
+//        when().thenReturn(category);
 //
 //        assertEquals(category, categoryRepository.save(category));
 
