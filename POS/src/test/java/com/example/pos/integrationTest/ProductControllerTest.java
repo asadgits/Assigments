@@ -1,10 +1,10 @@
 package com.example.pos.integrationTest;
 
 import com.example.pos.PosApplication;
-import com.example.pos.entities.Category;
-import com.example.pos.repositories.CategoryRepository;
+import com.example.pos.entities.Product;
+import com.example.pos.repositories.ProductRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.github.javafaker.Faker;
+//import com.github.javafaker.Faker;
 import org.json.JSONObject;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
@@ -43,7 +43,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 ////@TestPropertySource(locations = "classpath:posTestingProperties.properties")//first approch
 @ActiveProfiles("posTestingProperties")  // second approch
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class) //for manage orders in junit5 tests
-class CategoryControllerTest {
+class ProductControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -51,21 +51,21 @@ class CategoryControllerTest {
     @Autowired
     ObjectMapper objectMapper;
 
-    private final CategoryRepository categoryRepository;
+    private final ProductRepository productRepository;
     private static String categoryName;
     private static Integer categoryId;
 
 
     @Autowired
-    CategoryControllerTest(CategoryRepository categoryRepository) {
-        this.categoryRepository = categoryRepository;
+    ProductControllerTest(ProductRepository productRepository) {
+        this.productRepository = productRepository;
     }
 
 
     @ParameterizedTest
     @Order(1)
     @MethodSource
-    public void insertData(Category category) throws Exception {
+    public void insertData(Product product) throws Exception {
 
         MvcResult result = mockMvc
                 .perform(
@@ -73,7 +73,7 @@ class CategoryControllerTest {
                                 .post("/category/V1/")
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .accept(MediaType.APPLICATION_JSON)
-                                .content(objectMapper.writeValueAsString(category))
+                                .content(objectMapper.writeValueAsString(product))
                 )
                 .andExpect(MockMvcResultMatchers.status().isCreated())
 
@@ -123,7 +123,7 @@ class CategoryControllerTest {
     @ParameterizedTest
     @Order(4)
     @MethodSource("categoryUpdate")
-    public void updateData(Category category) throws Exception {
+    public void updateData(Product product) throws Exception {
 
         System.out.println(categoryId);
         mockMvc
@@ -132,7 +132,7 @@ class CategoryControllerTest {
                                 .put("/category/V1/")
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .accept(MediaType.APPLICATION_JSON)
-                                .content(objectMapper.writeValueAsString(category))
+                                .content(objectMapper.writeValueAsString(product))
                 )
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(
@@ -141,7 +141,7 @@ class CategoryControllerTest {
                                 .contentTypeCompatibleWith(MediaType.APPLICATION_JSON)
                 )
                 .andExpect(
-                        MockMvcResultMatchers.jsonPath("$", is(category.getCategoryId()))
+                        MockMvcResultMatchers.jsonPath("$", is(product.getProductId()))
                 )
                 .andDo(print());
 
@@ -151,17 +151,17 @@ class CategoryControllerTest {
 
 
     public void deleteData() {
-        categoryRepository.deleteAllInBatch(new ArrayList<Category>(categoryRepository.findAll()));
+        productRepository.deleteAllInBatch(new ArrayList<Product>(productRepository.findAll()));
     }
 
 
     private Long countSize() {
-        return categoryRepository.count();
+        return productRepository.count();
 
     }
 
     static Stream<Arguments> insertData() {
-        categoryName = String.valueOf(new Faker().cat().name());
+//        categoryName = String.valueOf(new Faker().cat().name());
         return Stream.of(
                 arguments(categoryName)
         );
@@ -170,11 +170,11 @@ class CategoryControllerTest {
 
     static Stream<Arguments> categoryUpdate() {
 
-        Category category = new Category();
-        category.setCategoryId(categoryId);
-        category.setCategoryName("category Upadated");
+        Product product = new Product();
+        product.setProductId(categoryId);
+        product.setProductName("category Upadated");
         return Stream.of(
-                arguments(category)
+                arguments(product)
         );
     }
 
@@ -183,7 +183,6 @@ class CategoryControllerTest {
                 arguments(categoryId)
         );
     }
-
 
 
 }

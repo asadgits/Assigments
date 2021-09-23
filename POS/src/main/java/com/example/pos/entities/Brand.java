@@ -3,9 +3,9 @@ package com.example.pos.entities;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-@Entity
-@Table(name = "tbl_brand")
+//
+//@Entity
+//@Table(name = "tbl_brand")
 public class Brand {
 
     @Id

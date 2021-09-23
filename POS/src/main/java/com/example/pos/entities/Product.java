@@ -1,20 +1,46 @@
 package com.example.pos.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "tbl_product")
 public class Product {
-    @Id
-    private Integer product_id;
-    private String product_name;
-    private Long product_price;
 
-    @ManyToOne
-    private Brand brand_id_fk;
-    @ManyToOne
-    private Category category_id_fk;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer productId;
+
+    private String productName;
+
+    public Product(String productName) {
+        this.productName = productName;
+    }
+
+    public Product() {
+
+    }
+
+    public Integer getProductId() {
+        return productId;
+    }
+
+    public void setProductId(Integer category_id) {
+        this.productId = category_id;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String category_name) {
+        this.productName = category_name;
+    }
+
+    @Override
+    public String toString() {
+        return "Categories{" +
+                "category_id=" + productId +
+                ", category_name='" + productName + '\'' +
+                '}';
+    }
 }
