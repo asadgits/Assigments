@@ -13,7 +13,7 @@ public class OrderInDetail {
     private Integer OrderDetailId;
 
     @ManyToOne
-    @JoinColumn(name = "category_id_fk")
-    private Category category;
+    @JoinColumn(name = "product_id_fk")
+    private Product product;
 
 }
