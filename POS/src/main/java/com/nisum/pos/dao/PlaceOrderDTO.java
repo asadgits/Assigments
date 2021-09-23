@@ -1,11 +1,16 @@
 package com.nisum.pos.dao;
 
-import com.nisum.pos.entities.PlaceOrder;
+import com.nisum.pos.entities.OrderInDetail;
+import lombok.Data;
 
+import java.time.LocalDate;
+import java.util.List;
 
+@Data
 public class PlaceOrderDTO {
 
-    private PlaceOrder placeOrder;
+    private Integer id;
+    private LocalDate date;
+    private List<OrderInDetail> orderInDetailList;
 
-    private Integer productQuantity;
 }

@@ -1,32 +1,44 @@
 package com.nisum.pos.controller;
 
 import com.nisum.pos.dao.PlaceOrderDTO;
-import com.nisum.pos.entities.PlaceOrder;
-import com.nisum.pos.services.PlaceOrderService;
+import com.nisum.pos.entities.OrderIdGenerate;
+import com.nisum.pos.services.OrderIdGenerateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
+import java.util.List;
 
 @RestController
-@RequestMapping("/PlaceOrder/V1/")
+//@RequestMapping("/PlaceOrder/V1/")
 public class PlaceOrderController {
 
-    private final PlaceOrderService placeOrderService;
+    private final OrderIdGenerateService orderIdGenerateService;
 
     @Autowired
-    public PlaceOrderController(PlaceOrderService placeOrderService) {
-        this.placeOrderService = placeOrderService;
+    public PlaceOrderController(OrderIdGenerateService orderIdGenerateService) {
+        this.orderIdGenerateService = orderIdGenerateService;
     }
 
-
     @PostMapping
-    public ResponseEntity<PlaceOrder> insertRecord(@Valid @RequestBody PlaceOrderDTO placeOrderDTO) {
-        return placeOrderService.insertRecord(placeOrderDTO);
+    public ResponseEntity<OrderIdGenerate> insertData(@RequestBody PlaceOrderDTO placeOrderDTO) {
+        System.out.println(placeOrderDTO);
+        return orderIdGenerateService.insertRecord(placeOrderDTO);
+    }
+
+    @PutMapping
+    public Integer updateData(@RequestBody PlaceOrderDTO placeOrderDTO) {
+        return orderIdGenerateService.updateRecord(placeOrderDTO);
+    }
+
+    @GetMapping
+    public List<OrderIdGenerate> getAllData() {
+        return orderIdGenerateService.getAllRecord();
+    }
+
+    @GetMapping(path = "/{id}")
+    public OrderIdGenerate getData(@PathVariable Integer id) {
+        return orderIdGenerateService.getRecord(id);
     }
 
 

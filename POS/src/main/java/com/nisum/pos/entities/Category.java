@@ -1,25 +1,16 @@
 package com.nisum.pos.entities;
 
-import lombok.Data;
-
 import javax.persistence.*;
-import java.util.List;
 
-@Data
 @Entity
-public class Category{
+@Table(name = "tbl_category")
+public class Category {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer categoryId;
 
     private String categoryName;
-//
-//    @OneToMany(targetEntity = OrderDetail.class,cascade = CascadeType.ALL)
-//    @JoinColumn(name = "Category_id_fk",referencedColumnName = "categoryId")
-//    private List<Category> categories ;
-
-    @ManyToOne
-    private OrderDetail orderDetail;
 
     public Integer getCategoryId() {
         return categoryId;
