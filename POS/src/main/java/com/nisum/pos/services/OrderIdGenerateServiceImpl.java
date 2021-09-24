@@ -26,6 +26,7 @@ public class OrderIdGenerateServiceImpl implements OrderIdGenerateService {
 
     @Override
     public OrderIdGenerate getRecord(Integer id) {
+
         return orderIdGenerateRepository.findById(id)
                 .orElseThrow(() ->  new ServiceGeneralException("RECORD NOT FOUND !!!" , HttpStatus.BAD_REQUEST));
     }

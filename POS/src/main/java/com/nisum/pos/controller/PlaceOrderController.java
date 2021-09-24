@@ -22,7 +22,6 @@ public class PlaceOrderController {
 
     @PostMapping
     public ResponseEntity<OrderIdGenerate> insertData(@RequestBody PlaceOrderDTO placeOrderDTO) {
-        System.out.println(placeOrderDTO);
         return orderIdGenerateService.insertRecord(placeOrderDTO);
     }
 
