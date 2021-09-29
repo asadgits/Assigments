@@ -1,6 +1,5 @@
 package com.example.pos.controllers;
 
-import com.example.pos.dto.ListValues;
 import com.example.pos.dto.ProductDTO;
 import com.example.pos.entities.Product;
 import com.example.pos.services.ProductService;
@@ -33,15 +32,11 @@ public class ProductController {
     }
 */
 
-
-    @PostMapping("/checkData")
-    public Product CheckingRecord(@RequestParam  List<Integer> list) {
-        System.out.println(list);
-        System.out.println("pakistan zinadabad");
-        return new Product("tea");
-//        return productService.checkRecord(values);
+    @GetMapping("/checkData")
+    public List<Product> CheckingRecord(@RequestParam(value = "ids") List<Integer> ids, @RequestParam(value = "quantities") List<Integer> quantities) {
+        System.out.println("In to the Product API "+ids+"    "+quantities);
+        return productService.checkRecord(ids , quantities);
     }
-
 
     @GetMapping(path = "/{id}")
     public Product getRecord(@PathVariable Integer id) {
@@ -68,7 +63,6 @@ public class ProductController {
         productService.deleteRecord(id);
     }
 }
-
 
 //    private static void accept(String key, List<String> value) {
 //        LOG.info(String.format(

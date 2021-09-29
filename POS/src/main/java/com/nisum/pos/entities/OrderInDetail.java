@@ -13,7 +13,11 @@ public class OrderInDetail {
     private Integer OrderDetailId;
 
     @ManyToOne
-    @JoinColumn(name = "product_id_fk")
+    @JoinColumns({
+            @JoinColumn(name = "product_id_fk", referencedColumnName = "productId"),
+            @JoinColumn(name = "product_quantity", referencedColumnName = "productQuantity")
+
+    })
     private Product product;
 
 }

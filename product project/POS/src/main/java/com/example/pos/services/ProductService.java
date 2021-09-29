@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface ProductService {
 
-    Product checkRecord(List<Integer> list);
+    List<Product> checkRecord(List<Integer> ids,List<Integer> quantities);
 
     Product getRecord(Integer id);
 

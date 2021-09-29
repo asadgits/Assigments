@@ -8,6 +8,7 @@ import java.util.List;
 
 public interface OrderIdGenerateService {
 
+
     OrderIdGenerate getRecord(Integer id);
     List<OrderIdGenerate> getAllRecord();
     ResponseEntity<OrderIdGenerate> insertRecord(PlaceOrderDTO placeOrderDTO);

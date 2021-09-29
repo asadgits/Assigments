@@ -41,4 +41,10 @@ public class PlaceOrderController {
     }
 
 
-}
+
+
+    public void checkRecord(List<Integer> ids, List<Integer> quantities) {
+    }
+
+
+    }

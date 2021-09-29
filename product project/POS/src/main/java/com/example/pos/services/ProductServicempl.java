@@ -1,6 +1,5 @@
 package com.example.pos.services;
 
-import com.example.pos.dto.ListValues;
 import com.example.pos.dto.ProductDTO;
 import com.example.pos.entities.Product;
 import com.example.pos.exceptionHandler.ServiceGeneralException;
@@ -11,16 +10,18 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.lang.reflect.ParameterizedType;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Stream;
+import java.util.stream.Collectors;
 
 @Service
 public class ProductServicempl implements ProductService {
 
     private final ModelMapper modelMapper;
     private final ProductRepository productRepository;
+
+    private List<Product> products = new ArrayList<>();
 
     @Autowired
     public ProductServicempl(ModelMapper modelMapper, ProductRepository productRepository) {
@@ -31,7 +32,7 @@ public class ProductServicempl implements ProductService {
     @Override
     public ResponseEntity<Product> insertRecord(ProductDTO productDTO) {
         System.out.println(productDTO.getProductName());
-        return new ResponseEntity<Product>(productRepository.save(modelMapper.map(productDTO, Product.class)) , HttpStatus.CREATED);
+        return new ResponseEntity<Product>(productRepository.save(modelMapper.map(productDTO, Product.class)), HttpStatus.CREATED);
     }
 
     @Override
@@ -49,20 +50,42 @@ public class ProductServicempl implements ProductService {
         return new ArrayList<Product>(productRepository.findAll());
     }
 
-//    @Override
-//    public Product checkRecord(List<Integer> id) {
-//        return productRepository.findById(id.stream().iterator().next()).orElseThrow(() ->  new ServiceGeneralException("RECORD NOT FOUND !!!" , HttpStatus.BAD_REQUEST));
-//    }
-
-
     @Override
-    public Product checkRecord(List<Integer> list) {
-        return (Product) productRepository.findAllByProductIdIn(list);
+    public List<Product> checkRecord(List<Integer> ids, List<Integer> quantities) {
+
+        products = productRepository.findAllByProductIdIn(ids);
+
+        if (products.isEmpty() || (products.size() != ids.size())) {
+            throw new ServiceGeneralException("Record Not Found !!! ", HttpStatus.BAD_REQUEST);
+        } else {
+            System.out.println("All Products matched !!!");
+//            for(Product product:products){
+//                int i=0;
+//                if(quantities.get(i) > product.getProductQuantity()){
+//                    throw new ServiceGeneralException("QUANTITY MISSED MATCHED of Product "+product.getProductName() , HttpStatus.BAD_REQUEST);
+//                }
+//                i++;
+//            }
+            System.out.println(products.stream().flatMap(x-> quantities.stream().filter(y-> x.getProductQuantity() <= y)).findAny()
+                    .orElseThrow(()-> new ServiceGeneralException("QUANTITY MISSED MATCHED of Product " , HttpStatus.BAD_REQUEST)));
+            System.out.println(quantities
+                    .stream().flatMap(y->products.stream()
+                            .filter(x-> y <= x.getProductQuantity())
+
+                    ));
+
+
+//            products.stream().forEach(product -> );
+
+        }
+
+        return products;
     }
+
 
     @Override
     public Product getRecord(Integer id) {
         return productRepository.findById(id)
-                .orElseThrow(() ->  new ServiceGeneralException("RECORD NOT FOUND !!!" , HttpStatus.BAD_REQUEST));
-}
+                .orElseThrow(() -> new ServiceGeneralException("RECORD NOT FOUND !!!", HttpStatus.BAD_REQUEST));
+    }
 }

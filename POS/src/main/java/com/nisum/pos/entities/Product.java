@@ -20,4 +20,6 @@ public class Product {
 
     private String productName;
 
+    private Integer productQuantity;
+
 }
