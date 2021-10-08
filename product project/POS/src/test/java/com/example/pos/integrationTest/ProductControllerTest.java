@@ -4,7 +4,7 @@ import com.example.pos.PosApplication;
 import com.example.pos.entities.Product;
 import com.example.pos.repositories.ProductRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
-//import com.github.javafaker.Faker;
+import com.github.javafaker.Faker;
 import org.json.JSONObject;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
@@ -51,6 +51,7 @@ class ProductControllerTest {
     @Autowired
     ObjectMapper objectMapper;
 
+    @Autowired
     private final ProductRepository productRepository;
     private static String categoryName;
     private static Integer categoryId;
@@ -86,6 +87,7 @@ class ProductControllerTest {
                         MockMvcResultMatchers.jsonPath("$.categoryName", is(categoryName))
                 )
                 .andReturn();
+
         System.out.println(new JSONObject(result.getResponse().getContentAsString()).get("categoryId"));
         categoryId = (Integer) new JSONObject(result.getResponse().getContentAsString()).get("categoryId");
 

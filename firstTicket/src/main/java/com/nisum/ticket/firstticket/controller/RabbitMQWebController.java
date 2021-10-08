@@ -1,17 +1,23 @@
-package com.nisum.ticket.firstticket.service;
+package com.nisum.ticket.firstticket.controller;
 
-import com.nisum.ticket.firstticket.requestDTOs.ShipmentrequestDto;
 import com.nisum.ticket.firstticket.responseDTOs.Common;
 import com.nisum.ticket.firstticket.responseDTOs.Packages;
 import com.nisum.ticket.firstticket.responseDTOs.ShipmentresponseDto;
+import com.nisum.ticket.firstticket.service.RabbitMQSender;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.io.IOException;
 import java.util.Date;
 
-@Service
-public class ShipmentImpl implements Shipment{
+@RestController
+@RequestMapping("/rabbit/")
+public class RabbitMQWebController {
+
+    @Autowired
+    RabbitMQSender rabbitMQSender;
 
     @Autowired
     ShipmentresponseDto shipmentresponseDto;
@@ -23,9 +29,9 @@ public class ShipmentImpl implements Shipment{
     Common common;
 
 
-
-    @Override
-    public ShipmentresponseDto insertShipment(ShipmentrequestDto shipmentrequestDto) throws IOException {
+    @GetMapping
+    public String producer() {
+        System.out.println("in to the producer Method");
 
         common.setTotal(100);
         common.setBase(200);
@@ -48,6 +54,9 @@ public class ShipmentImpl implements Shipment{
         shipmentresponseDto.setShipmentPackage(packages);
 
 
-        return shipmentresponseDto;
+        rabbitMQSender.send(shipmentresponseDto);
+
+        return "Message sent to the RabbitMQ ShipmentResponse Successfully";
     }
+
 }
